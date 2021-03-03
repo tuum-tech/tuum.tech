@@ -1,0 +1,19 @@
+.headerContainer {
+  background: url('../../assets/img/backgrounds/hero.png');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  min-height: 670px;
+  padding-top: 88px;
+
+  display: flex;
+  justify-content: center;
+
+  &_content {
+    display: block;
+    color: white;
+    width: 100%;
+    max-width: 655px;
+    padding: 3.5rem 0;
+  }
+}
