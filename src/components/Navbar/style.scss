@@ -1,3 +1,13 @@
+.scroll-header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  .navbar {
+    background-color: #101010 !important;
+  }
+}
+
 .nav-link {
   color: white !important;
 }

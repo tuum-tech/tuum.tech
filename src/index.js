@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 import App from './App';
-import reportWebVitals from './reportWebVitals'
-import './index.scss';
+import reportWebVitals from './reportWebVitals';
+import './assets/scss/style.scss';
 
 ReactDOM.render(
   <React.StrictMode>

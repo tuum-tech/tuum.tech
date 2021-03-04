@@ -1,26 +1,23 @@
 import React from 'react';
-import { MDBContainer } from 'mdbreact';
-
-import ArgonReactWhite from '../../assets/img/brand/argon-react-white.png';
 
 import './style.scss';
 
 const Hero = () => {
   return (
     <div className='headerContainer'>
-      <MDBContainer>
+      <div className='container'>
         <div className='headerContainer_content'>
-          <h1 className='text-white'>
-            The Most Trusted Etherum Blockchain Solutions
-          </h1>
+          <h1 className='text-white'>Empowering people in a digital world</h1>
           <p>
-            Tuum.Tech is the software engineering leader of the blockchain
-            space. Our full-stack Ethereum products help developers build
-            next-generation networks and enable enterprises to launch more
-            powerful financial infrastructure.
+            We combine software development with a decentralized vision that
+            pairs users’ digital identities with data ownership.
           </p>
+
+          <button type='button' class='btn btn-primary mt-1'>
+            EXPLORE OUR SOLUTIONS
+          </button>
         </div>
-      </MDBContainer>
+      </div>
     </div>
   );
 };

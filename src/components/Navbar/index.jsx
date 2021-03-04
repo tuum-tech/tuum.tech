@@ -1,19 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import logo from '../../assets/img/brand/argon-react-white.png';
+
+import Opportunites from './Opportunites';
+import Products from './Products';
+import Learn from './Learn';
 import './style.scss';
 
-import Solutions from './Solutions';
-import Products from './Products';
-
 const HeaderNavBar = () => {
-  //   const [collapseClasses, setCollapseClasses] = useState('')
+  const [classNames, setClassNames] = useState('');
 
+  const handleScroll = () => {
+    if (window.scrollY > 20) {
+      setClassNames('scroll-header');
+    } else {
+      setClassNames('');
+    }
+  };
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <header className='header-global'>
+    <header className={classNames}>
       <nav
         id='navbar-main'
-        className='navbar navbar-dark navbar-main navbar-expand-lg navbar-transparent navbar-light headroom'
+        className='navbar navbar-dark navbar-main navbar-transparent navbar-expand-lg navbar-light headroom'
       >
         <a className='navbar-brand mr-lg-5 lg-hidden' href='../index.html'>
           <img src={logo} alt='logo' />
@@ -61,11 +75,56 @@ const HeaderNavBar = () => {
             <img src={logo} alt='logo' />
           </a>
           <ul className='navbar-nav navbar-nav-hover align-items-lg-center'>
-            <Solutions />
+            <li className='nav-item dropdown'>
+              <a
+                href='/'
+                className='nav-link'
+                data-toggle='dropdown'
+                role='button'
+              >
+                <i className='ni ni-collection d-lg-none' />
+                <span className='nav-link-inner--text'>WHO ARE WE?</span>
+              </a>
+            </li>
+            <Opportunites />
             <Products />
+            <Learn />
+            {/* <li className='nav-item dropdown'>
+              <a
+                href='/'
+                className='nav-link'
+                data-toggle='dropdown'
+                role='button'
+              >
+                <i className='ni ni-collection d-lg-none' />
+                <span className='nav-link-inner--text'>Learn</span>
+              </a>
+            </li> */}
+            <li className='nav-item dropdown'>
+              <a
+                href='/'
+                className='nav-link'
+                data-toggle='dropdown'
+                role='button'
+              >
+                <i className='ni ni-collection d-lg-none' />
+                <span className='nav-link-inner--text'>Blog</span>
+              </a>
+            </li>
+            <li className='nav-item dropdown'>
+              <a
+                href='/'
+                className='nav-link'
+                data-toggle='dropdown'
+                role='button'
+              >
+                <i className='ni ni-collection d-lg-none' />
+                <span className='nav-link-inner--text'>Company</span>
+              </a>
+            </li>
           </ul>
           <ul className='navbar-nav align-items-lg-center'>
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <a
                 className='nav-link nav-link-icon'
                 href='https://www.facebook.com/creativetim'
@@ -75,8 +134,8 @@ const HeaderNavBar = () => {
                 <i className='fa fa-facebook-square' />
                 <span className='nav-link-inner--text d-lg-none'>Facebook</span>
               </a>
-            </li>
-            <li className='nav-item'>
+            </li> */}
+            {/* <li className='nav-item'>
               <a
                 className='nav-link nav-link-icon'
                 href='https://www.instagram.com/creativetimofficial'
@@ -88,7 +147,7 @@ const HeaderNavBar = () => {
                   Instagram
                 </span>
               </a>
-            </li>
+            </li> */}
             <li className='nav-item'>
               <a
                 className='nav-link nav-link-icon'
@@ -111,7 +170,7 @@ const HeaderNavBar = () => {
                 <span className='nav-link-inner--text d-lg-none'>Github</span>
               </a>
             </li>
-            <li className='nav-item d-none d-lg-block ml-lg-4'>
+            {/* <li className='nav-item d-none d-lg-block ml-lg-4'>
               <a
                 href='https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-static-docs'
                 className='btn btn-neutral btn-icon'
@@ -121,7 +180,7 @@ const HeaderNavBar = () => {
                 </span>
                 <span className='nav-link-inner--text'>Download</span>
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </nav>

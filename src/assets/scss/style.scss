@@ -1,0 +1,23 @@
+// Bootstrap Functions
+@import 'bootstrap/scss/functions';
+
+// Theme Variables
+@import 'design-system/variables';
+
+// Bootstrap Core
+@import 'bootstrap/scss/bootstrap';
+
+// Theme Core
+@import 'design-system/theme';
+
+// React Differences
+@import 'react/react-differences';
+
+// Core
+
+// @import '~mdbreact/dist/css/mdb.css';
+
+@import '../vendor/nucleo/css/nucleo.css';
+@import '../vendor/font-awesome/css/font-awesome.min.css';
+
+@import './variable.scss';
