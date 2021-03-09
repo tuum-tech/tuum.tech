@@ -1,24 +1,42 @@
 import React from 'react';
 
-import './style.scss';
+import HomeHero from '../../assets/img/backgrounds/home-hero.png';
+
+import {
+  HeroContainerWrapper,
+  HeroContainer,
+  HeroContent,
+  ShortIntro,
+  Title,
+  IntroTxt,
+  ButtonArea,
+  MeetButton,
+} from './style';
+import Container from '../Container';
 
 const Hero = () => {
   return (
-    <div className='headerContainer'>
-      <div className='container'>
-        <div className='headerContainer_content'>
-          <h1 className='text-white'>Empowering people in a digital world</h1>
-          <p>
-            We combine software development with a decentralized vision that
-            pairs users’ digital identities with data ownership.
-          </p>
-
-          <button type='button' class='btn btn-primary mt-1'>
-            EXPLORE OUR SOLUTIONS
-          </button>
-        </div>
-      </div>
-    </div>
+    <HeroContainerWrapper>
+      <HeroContainer
+        style={{
+          background: `url(${HomeHero})`,
+        }}
+      >
+        <HeroContent>
+          <ShortIntro>About Tuum</ShortIntro>
+          <Title>
+            Tuum Technologies is a <br /> Web 3.0 Technology Company
+          </Title>
+          <IntroTxt>
+            From developer tools to decentralized products, Tuum Technologies is
+            building Elastos blockchain infrastructure and applications for a
+            new web that is more open, ethical, and secure.
+          </IntroTxt>
+          <MeetButton type='button'>Meet our team</MeetButton>
+          <ButtonArea></ButtonArea>
+        </HeroContent>
+      </HeroContainer>
+    </HeroContainerWrapper>
   );
 };
 

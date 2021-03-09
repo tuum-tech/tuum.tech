@@ -20,4 +20,10 @@
 @import '../vendor/nucleo/css/nucleo.css';
 @import '../vendor/font-awesome/css/font-awesome.min.css';
 
-@import './variable.scss';
+@import 'fonts.scss';
+
+html,
+body {
+  font-family: 'SF Pro Display';
+  background-color: #f7fafc;
+}

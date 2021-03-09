@@ -2,14 +2,14 @@ import React from 'react';
 import classNames from 'classnames';
 
 import SectionHeader from '../SectionHeader';
-import SplitItem from '../SplitItem';
-import defaultImg from '../../../assets/img/features/default.png';
+import SplitImgItem from '../SplitImgItem';
+
 import elastosImg from '../../../assets/img/features/elastosinfo.jpg';
 import vouchImg from '../../../assets/img/features/vouch.jpg';
 
 import './style.scss';
 
-const FeaturesSplit = ({
+const Features = ({
   className,
   invertColor,
   invertMobile,
@@ -37,32 +37,17 @@ const FeaturesSplit = ({
             }}
           />
           <div className={splitClasses}>
-            <SplitItem
-              imgSrc={defaultImg}
-              intro='Web Development / Branding & Identity'
-              title='Profile'
-              description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt ut labore et dolore magna aliqua
-              — Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.'
-            />
-            <SplitItem
-              imgSrc={elastosImg}
-              intro='Web / Branding & Identity / Educational'
-              title='Data-driven insights'
-              description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt ut labore et dolore magna aliqua
-              — Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.'
-            />
-            <SplitItem
+            <SplitImgItem
               imgSrc={vouchImg}
-              intro='Mobile Development / UI & UX'
-              title='Vouch'
-              description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-              do eiusmod tempor incididunt ut labore et dolore magna aliqua
-              — Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.'
+              intro='FEATURED TOOL'
+              title='Introduction to DID'
+              description='Information here about getDIDs.com'
+            />
+            <SplitImgItem
+              imgSrc={elastosImg}
+              intro='FEATURED PRODUCT'
+              title='Be your own entity online'
+              description='Information here about Profile'
             />
           </div>
         </div>
@@ -71,4 +56,4 @@ const FeaturesSplit = ({
   );
 };
 
-export default FeaturesSplit;
+export default Features;

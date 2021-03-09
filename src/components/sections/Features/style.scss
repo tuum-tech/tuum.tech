@@ -1,24 +1,17 @@
-$split-item--p-v__mobile: 48px;
-$split-item--p-v__desktop: 80px;
-$split-item-content--p-h: 52px;
-$split-item-image--p-h: 12px;
-$split-item--inner-p-v_mobile: 32px;
-$split-item--inner-p-h: $split-item-content--p-h + $split-item-image--p-h;
-
 .split-wrap {
-  margin-top: -($split-item--p-v__mobile / 2);
+  margin-top: -24px;
 
   &:last-of-type {
-    margin-bottom: -($split-item--p-v__mobile / 2);
+    margin-bottom: -24px;
   }
 
   &:not(:last-of-type) {
-    margin-bottom: $split-item--p-v__mobile / 2;
+    margin-bottom: 24px;
   }
 
   .split-item {
-    padding-top: $split-item--p-v__mobile / 2;
-    padding-bottom: $split-item--p-v__mobile / 2;
+    padding-top: 24px;
+    padding-bottom: 24px;
     display: flex;
     flex-direction: column;
 
@@ -38,12 +31,63 @@ $split-item--inner-p-h: $split-item-content--p-h + $split-item-image--p-h;
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .split-wrap {
+    margin-top: -40px;
+
+    &:last-of-type {
+      margin-bottom: -40px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 40px;
+    }
+
+    .split-item {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: flex-start;
+
+      .split-item-content {
+        flex-shrink: 0;
+        margin-bottom: 0;
+        width: calc(50% - 25px);
+        margin-left: 0;
+        margin-right: 25px;
+      }
+
+      .split-item-image {
+        width: calc(50% - 25px);
+        margin-left: 25px;
+        margin-right: 0;
+      }
+    }
+
+    .split-item:nth-child(odd) {
+      justify-content: flex-end;
+
+      .split-item-content {
+        order: 1;
+        margin-left: 25px;
+        margin-right: 0;
+      }
+
+      .split-item-image {
+        margin-left: 0;
+        margin-right: 25px;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 768px) {
-  // @include media('<=medium') {
   .split-wrap {
     .split-item {
       .split-item-content {
-        margin-bottom: $split-item--inner-p-v_mobile;
+        margin-bottom: 32px;
       }
     }
 
@@ -55,86 +99,7 @@ $split-item--inner-p-h: $split-item-content--p-h + $split-item-image--p-h;
         }
 
         .split-item-image {
-          margin-bottom: $split-item--inner-p-v_mobile;
-        }
-      }
-    }
-  }
-}
-
-// @include media('>medium') {
-@media only screen and (min-width: 992px) {
-  .split-wrap {
-    margin-top: -($split-item--p-v__desktop / 2);
-
-    &:last-of-type {
-      margin-bottom: -($split-item--p-v__desktop / 2);
-    }
-
-    &:not(:last-of-type) {
-      margin-bottom: $split-item--p-v__desktop / 2;
-    }
-
-    .split-item {
-      padding-top: $split-item--p-v__desktop / 2;
-      padding-bottom: $split-item--p-v__desktop / 2;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-items: center;
-      justify-content: flex-start;
-
-      .split-item-content {
-        flex-shrink: 0;
-        margin-bottom: 0;
-        margin-right: $split-item--inner-p-h;
-        width: 896 / 2 - $split-item-content--p-h;
-      }
-
-      .split-item-image {
-        min-width: 896 / 2 - $split-item-content--p-h;
-      }
-    }
-
-    &:not(.invert-desktop) .split-item:nth-child(even),
-    &.invert-desktop .split-item:nth-child(odd) {
-      justify-content: flex-end;
-
-      .split-item-content {
-        order: 1;
-        margin-left: $split-item--inner-p-h;
-        margin-right: 0;
-      }
-    }
-
-    &:not(.invert-desktop) .split-item:nth-child(odd),
-    &.invert-desktop .split-item:nth-child(even) {
-      .split-item-image {
-        img,
-        svg,
-        video {
-          margin-left: auto;
-        }
-      }
-    }
-
-    &.align-top {
-      .split-item {
-        align-items: flex-start;
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .container {
-    .split-wrap {
-      .split-item {
-        .split-item-content {
-          width: 1080 / 2 - $split-item-content--p-h;
-        }
-
-        .split-item-image {
-          width: 1080 / 2 - $split-item-content--p-h;
+          margin-bottom: 32px;
         }
       }
     }

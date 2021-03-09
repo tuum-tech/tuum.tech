@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
-import logo from '../../assets/img/brand/argon-react-white.png';
+import logo from '../../assets/img/brand/logo.png';
 
-import Opportunites from './Opportunites';
+// import Opportunites from './Opportunites';
+// import SocialButtons from './SocialButtons';
+// import Learn from './Learn';
+import Solutions from './Solutions';
 import Products from './Products';
-import Learn from './Learn';
+import Company from './Company';
+
 import './style.scss';
 
 const HeaderNavBar = () => {
@@ -27,9 +31,9 @@ const HeaderNavBar = () => {
     <header className={classNames}>
       <nav
         id='navbar-main'
-        className='navbar navbar-dark navbar-main navbar-transparent navbar-expand-lg navbar-light headroom'
+        className='navbar navbar-dark navbar-main navbar-transparent navbar-expand-lg headroom'
       >
-        <a className='navbar-brand mr-lg-5 lg-hidden' href='../index.html'>
+        <a className='navbar-brand mr-lg-5 lg-hidden' href='/'>
           <img src={logo} alt='logo' />
         </a>
         <button
@@ -71,117 +75,35 @@ const HeaderNavBar = () => {
               </div>
             </div>
           </div>
-          <a className='navbar-brand mr-lg-5' href='../index.html'>
+          <a className='navbar-brand mr-lg-5 lg-show' href='/'>
             <img src={logo} alt='logo' />
           </a>
           <ul className='navbar-nav navbar-nav-hover align-items-lg-center'>
+            <Solutions />
+            <Products />
             <li className='nav-item dropdown'>
               <a
-                href='/'
+                href='https://elastos.academy/'
                 className='nav-link'
-                data-toggle='dropdown'
                 role='button'
               >
                 <i className='ni ni-collection d-lg-none' />
-                <span className='nav-link-inner--text'>WHO ARE WE?</span>
+                <span className='nav-link-inner--text'>Developers</span>
               </a>
             </li>
-            <Opportunites />
-            <Products />
-            <Learn />
-            {/* <li className='nav-item dropdown'>
+            <li className='nav-item dropdown'>
               <a
-                href='/'
+                href='https://elastos.academy/'
                 className='nav-link'
-                data-toggle='dropdown'
                 role='button'
               >
                 <i className='ni ni-collection d-lg-none' />
                 <span className='nav-link-inner--text'>Learn</span>
               </a>
-            </li> */}
-            <li className='nav-item dropdown'>
-              <a
-                href='/'
-                className='nav-link'
-                data-toggle='dropdown'
-                role='button'
-              >
-                <i className='ni ni-collection d-lg-none' />
-                <span className='nav-link-inner--text'>Blog</span>
-              </a>
             </li>
-            <li className='nav-item dropdown'>
-              <a
-                href='/'
-                className='nav-link'
-                data-toggle='dropdown'
-                role='button'
-              >
-                <i className='ni ni-collection d-lg-none' />
-                <span className='nav-link-inner--text'>Company</span>
-              </a>
-            </li>
+            <Company />
           </ul>
-          <ul className='navbar-nav align-items-lg-center'>
-            {/* <li className='nav-item'>
-              <a
-                className='nav-link nav-link-icon'
-                href='https://www.facebook.com/creativetim'
-                data-toggle='tooltip'
-                title='Like us on Facebook'
-              >
-                <i className='fa fa-facebook-square' />
-                <span className='nav-link-inner--text d-lg-none'>Facebook</span>
-              </a>
-            </li> */}
-            {/* <li className='nav-item'>
-              <a
-                className='nav-link nav-link-icon'
-                href='https://www.instagram.com/creativetimofficial'
-                data-toggle='tooltip'
-                title='Follow us on Instagram'
-              >
-                <i className='fa fa-instagram' />
-                <span className='nav-link-inner--text d-lg-none'>
-                  Instagram
-                </span>
-              </a>
-            </li> */}
-            <li className='nav-item'>
-              <a
-                className='nav-link nav-link-icon'
-                href='https://twitter.com/creativetim'
-                data-toggle='tooltip'
-                title='Follow us on Twitter'
-              >
-                <i className='fa fa-twitter-square' />
-                <span className='nav-link-inner--text d-lg-none'>Twitter</span>
-              </a>
-            </li>
-            <li className='nav-item'>
-              <a
-                className='nav-link nav-link-icon'
-                href='https://github.com/creativetimofficial/argon-design-system-react'
-                data-toggle='tooltip'
-                title='Star us on Github'
-              >
-                <i className='fa fa-github' />
-                <span className='nav-link-inner--text d-lg-none'>Github</span>
-              </a>
-            </li>
-            {/* <li className='nav-item d-none d-lg-block ml-lg-4'>
-              <a
-                href='https://www.creative-tim.com/product/argon-design-system-react?ref=adsr-static-docs'
-                className='btn btn-neutral btn-icon'
-              >
-                <span className='btn-inner--icon'>
-                  <i className='fa fa-cloud-download mr-2' />
-                </span>
-                <span className='nav-link-inner--text'>Download</span>
-              </a>
-            </li> */}
-          </ul>
+          {/* <SocialButtons/> */}
         </div>
       </nav>
     </header>

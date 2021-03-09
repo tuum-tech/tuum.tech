@@ -47,7 +47,7 @@ const Products = () => {
               <i className='ni ni-ui-04' />
             </div>
             <div className='media-body ml-3'>
-              <h5 className='heading text-warning mb-md-1'>Components</h5>
+              <h6 className='heading text-warning mb-md-1'>Components</h6>
               <p className='description d-none d-md-inline-block mb-0'>
                 Browse our 50 beautiful handcrafted components offered in the
                 Free version.
