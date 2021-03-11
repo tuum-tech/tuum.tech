@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 import logo from '../../assets/img/brand/logo.png';
 
-// import Opportunites from './Opportunites';
-// import SocialButtons from './SocialButtons';
-// import Learn from './Learn';
 import Solutions from './Solutions';
 import Products from './Products';
 import Company from './Company';

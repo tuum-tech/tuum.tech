@@ -27,3 +27,18 @@ body {
   font-family: 'SF Pro Display';
   background-color: #f7fafc;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+}

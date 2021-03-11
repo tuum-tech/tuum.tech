@@ -1,6 +1,7 @@
+import React from 'react';
 import styled from 'styled-components';
 
-import Conatiner from '../Container';
+import HomeHero from '../assets/img/backgrounds/home-hero.png';
 
 const HeroContainerWrapper = styled.div`
   width: 100%;
@@ -91,13 +92,30 @@ const MeetButton = styled.button`
   color: #ffffff;
 `;
 
-export {
-  HeroContainerWrapper,
-  HeroContainer,
-  HeroContent,
-  ShortIntro,
-  Title,
-  IntroTxt,
-  ButtonArea,
-  MeetButton,
+const Hero = () => {
+  return (
+    <HeroContainerWrapper>
+      <HeroContainer
+        style={{
+          background: `url(${HomeHero})`,
+        }}
+      >
+        <HeroContent>
+          <ShortIntro>About Tuum</ShortIntro>
+          <Title>
+            Tuum Technologies is a <br /> Web 3.0 Technology Company
+          </Title>
+          <IntroTxt>
+            From developer tools to decentralized products, Tuum Technologies is
+            building Elastos blockchain infrastructure and applications for a
+            new web that is more open, ethical, and secure.
+          </IntroTxt>
+          <MeetButton type='button'>Meet our team</MeetButton>
+          <ButtonArea></ButtonArea>
+        </HeroContent>
+      </HeroContainer>
+    </HeroContainerWrapper>
+  );
 };
+
+export default Hero;

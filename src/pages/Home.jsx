@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 
 import Features from '../components/sections/Features';
 import Section from '../components/Section';
+import Subscriber from '../components/Subscriber';
 
 import SectionBgImg from '../assets/img/backgrounds/sectionbg.png';
 
@@ -15,6 +16,7 @@ const App = () => {
       <NavBar />
       <main>
         <Hero />
+        <Subscriber />
         {/* <Features /> */}
         <Section contentText='Tuum Technologies is the world’s leading provider of Elastos powered solutions, using education and opportunity to advance projects building a decentralized Internet. We back bold entrepreneurs and developers building a decentralized future from learning through all phases of growth. We connect entrepreneurs, developers, academics, industry experts, and others in the technology ecosystem. Through the Tuum network we provide teams with access to expertise and insights that enhance the Elastos development experience while providing a decentralized Internet for all.' />
         <Section
