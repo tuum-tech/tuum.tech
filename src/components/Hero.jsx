@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import HomeHero from '../assets/img/backgrounds/home-hero.png';
-
 const HeroContainerWrapper = styled.div`
   width: 100%;
   background: #17171b;
@@ -49,6 +47,7 @@ const Title = styled.p`
   font-weight: 600;
   font-size: 50px;
   line-height: 55px;
+  margin-top: 15px;
 
   display: flex;
   align-items: center;
@@ -56,6 +55,7 @@ const Title = styled.p`
 `;
 
 const IntroTxt = styled.p`
+  margin-top: 30px;
   font-family: SF Pro Display;
   font-style: normal;
   font-weight: normal;
@@ -64,54 +64,51 @@ const IntroTxt = styled.p`
   color: #d5d5dc;
 `;
 
-const ButtonArea = styled.div`
+const MeetButton = styled.div`
+  width: 186px;
+  height: 36px;
+  background: #4c6fff !important;
+  border-radius: 10px;
+  margin-top: 50px;
+  text-align: center;
+
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 36px;
+  color: #ffffff;
+  position: relative;
+`;
+
+const ButtonShadow = styled.div`
   width: 211.83px;
   height: 60px;
   position: absolute;
-  left: 155px;
-  top: 502.29px;
+  left: 0;
+  top: 0;
 
   background: rgba(76, 111, 255, 0.24);
   filter: blur(54px);
   border-radius: 10px;
 `;
 
-const MeetButton = styled.button`
-  width: 186px;
-  height: 36px;
-  background: #4c6fff !important;
-  border-radius: 10px;
-  outline: none;
-  border: none;
-  margin-top: 50px;
-
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 25px;
-  color: #ffffff;
-`;
-
-const Hero = () => {
+const Hero = ({ shortInfo, title, intro, buttonTxt, bgImg }) => {
   return (
     <HeroContainerWrapper>
       <HeroContainer
         style={{
-          background: `url(${HomeHero})`,
+          background: `url(${bgImg})`,
         }}
       >
         <HeroContent>
-          <ShortIntro>About Tuum</ShortIntro>
-          <Title>
-            Tuum Technologies is a <br /> Web 3.0 Technology Company
-          </Title>
-          <IntroTxt>
-            From developer tools to decentralized products, Tuum Technologies is
-            building Elastos blockchain infrastructure and applications for a
-            new web that is more open, ethical, and secure.
-          </IntroTxt>
-          <MeetButton type='button'>Meet our team</MeetButton>
-          <ButtonArea></ButtonArea>
+          {shortInfo && <ShortIntro>{shortInfo}</ShortIntro>}
+          {title && <Title>{title}</Title>}
+          {intro && <IntroTxt>{intro}</IntroTxt>}
+          {buttonTxt && (
+            <MeetButton onClick={() => {}}>
+              Meet our team <ButtonShadow />
+            </MeetButton>
+          )}
         </HeroContent>
       </HeroContainer>
     </HeroContainerWrapper>

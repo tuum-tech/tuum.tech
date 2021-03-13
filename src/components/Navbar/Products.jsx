@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Products = () => {
   return (
     <li className='nav-item dropdown'>
-      <a href='/' className='nav-link' data-toggle='dropdown' role='button'>
+      <Link href='/' className='nav-link' data-toggle='dropdown' role='button'>
         <i className='ni ni-ui-04 d-lg-none' />
         <span className='nav-link-inner--text'>Products</span>
-      </a>
+      </Link>
       <div className='dropdown-menu dropdown-menu-xl'>
         <div className='dropdown-menu-inner'>
           <a

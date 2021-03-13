@@ -2,8 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 const SubscriberContainer = styled.div`
+  position: absolute;
+  top: -120px;
   width: 90%;
-  margin: -125px auto 0;
+  margin: 0 auto 0;
   background: #ffffff;
   border-radius: 10px;
   padding: 53px 5%;

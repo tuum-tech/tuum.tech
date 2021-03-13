@@ -4,35 +4,29 @@ import { withRouter } from 'react-router-dom';
 import NavBar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
-
-import Features from '../components/sections/Features';
 import Section from '../components/Section';
-import Subscriber from '../components/Subscriber';
 import OurTeam from '../components/OurTeam';
 
 import SectionBgImg from '../assets/img/backgrounds/sectionbg.png';
-import HomeHero from '../assets/img/backgrounds/home-hero.png';
-import heroImg from '../assets/img/backgrounds/home-hero.png';
+import heroImg from '../assets/img/backgrounds/about-hero.png';
+// import heroImg from '../assets/img/backgrounds/home-hero.png';
 
-const HomePage = () => {
+const AboutPage = () => {
   return (
     <>
       <NavBar />
       <main>
         <Hero
           bgImg={heroImg}
-          title={'The Most Trusted' + '\n' + 'Elastos Blockchain Solutions'}
+          shortInfo='About Tuum'
           intro={
-            'Tuum Technologies is the software engineering leader of the Open Decentralized Internet space.' +
+            'From developer tools to decentralized products, Tuum Technologies is building' +
             '\n' +
-            ' Our suite of Elastos powered products and services help developers build decentralized' +
-            '\n' +
-            'applications and enable individuals to control data on an open web.'
+            'Elastos blockchain infrastructure and applications for a new web that is more open, ethical, and secure.'
           }
-          buttonTxt='Explore our solutions'
+          title={'Tuum Technologies is a' + '\n' + 'Web 3.0 Technology Company'}
+          buttonTxt='Meet our team'
         />
-
-        {/* <Features /> */}
         <Section
           contentText='Tuum Technologies is the world’s leading provider of Elastos powered solutions, using education and opportunity to advance projects building a decentralized Internet. We back bold entrepreneurs and developers building a decentralized future from learning through all phases of growth. We connect entrepreneurs, developers, academics, industry experts, and others in the technology ecosystem. Through the Tuum network we provide teams with access to expertise and insights that enhance the Elastos development experience while providing a decentralized Internet for all.'
           maxWidth='971px'
@@ -59,4 +53,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default AboutPage;

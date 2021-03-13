@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 import logo from '../assets/img/brand/logo.png';
+import Subscriber from './Subscriber';
 
 const FooterContainer = styled.div`
   width: 100%;
   padding: 168px 11% 42px;
   background: #17171b;
+  position: relative;
 
   @media only screen and (max-width: 992px) {
     padding-left: 2rem;
@@ -53,9 +55,10 @@ const Category = styled.p`
   margin-bottom: 20px;
 `;
 
-const Footer = () => {
+const Footer = ({ hasSubscriber = true }) => {
   return (
-    <FooterContainer>
+    <FooterContainer style={{ marginTop: hasSubscriber ? '125px' : '0' }}>
+      {hasSubscriber && <Subscriber />}
       <div className='row'>
         <div className='col-lg-5 col-md-4'>
           <div className='row'>

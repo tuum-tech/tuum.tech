@@ -1,22 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Company = () => {
-  return (
-    <li className='nav-item dropdown'>
-      <a href='/' className='nav-link' data-toggle='dropdown' role='button'>
-        <i className='ni ni-collection d-lg-none' />
-        <span className='nav-link-inner--text'>Company</span>
-      </a>
-      <div className='dropdown-menu'>
-        <a href='/' className='dropdown-item'>
-          Tuum
-        </a>
-        <a href='/' className='dropdown-item'>
-          Team Members
-        </a>
-      </div>
-    </li>
-  );
-};
+const Company = () => (
+  <li className='nav-item dropdown'>
+    <Link to='/' className='nav-link' data-toggle='dropdown' role='button'>
+      <i className='ni ni-collection d-lg-none' />
+      <span className='nav-link-inner--text'>Company</span>
+    </Link>
+    <div className='dropdown-menu'>
+      <Link to='/about' className='dropdown-item'>
+        About Team
+      </Link>
+      <Link to='/' className='dropdown-item'>
+        Contact
+      </Link>
+    </div>
+  </li>
+);
 
 export default Company;

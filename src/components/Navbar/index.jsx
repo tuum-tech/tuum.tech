@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import logo from '../../assets/img/brand/logo.png';
 
@@ -30,9 +31,9 @@ const HeaderNavBar = () => {
         id='navbar-main'
         className='navbar navbar-dark navbar-main navbar-transparent navbar-expand-lg headroom'
       >
-        <a className='navbar-brand mr-lg-5 lg-hidden' href='/'>
+        <Link className='navbar-brand mr-lg-5 lg-hidden' to='/'>
           <img src={logo} alt='logo' />
-        </a>
+        </Link>
         <button
           className='navbar-toggler'
           type='button'
@@ -52,9 +53,9 @@ const HeaderNavBar = () => {
           <div className='navbar-collapse-header'>
             <div className='row'>
               <div className='col-6 collapse-brand'>
-                <a href='../index.html'>
+                <Link to='/'>
                   <img src={logo} alt='logo' />
-                </a>
+                </Link>
               </div>
               <div className='col-6 collapse-close'>
                 <button
@@ -72,9 +73,9 @@ const HeaderNavBar = () => {
               </div>
             </div>
           </div>
-          <a className='navbar-brand mr-lg-5 lg-show' href='/'>
+          <Link className='navbar-brand mr-lg-5 lg-show' to='/'>
             <img src={logo} alt='logo' />
-          </a>
+          </Link>
           <ul className='navbar-nav navbar-nav-hover align-items-lg-center'>
             <Solutions />
             <Products />
