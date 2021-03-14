@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import ShadowButton from '../buttons/ShadowButton';
+
 const HeroContainerWrapper = styled.div`
   width: 100%;
   background: #17171b;
@@ -16,7 +18,7 @@ const HeroContainer = styled.div`
 
   width: 100%;
   padding-left: 11%;
-  padding-right: 11$;
+  padding-right: 11%;
 
   @media only screen and (max-width: 992px) {
     padding-left: 2rem;
@@ -64,34 +66,6 @@ const IntroTxt = styled.p`
   color: #d5d5dc;
 `;
 
-const MeetButton = styled.div`
-  width: 186px;
-  height: 36px;
-  background: #4c6fff !important;
-  border-radius: 10px;
-  margin-top: 50px;
-  text-align: center;
-
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 36px;
-  color: #ffffff;
-  position: relative;
-`;
-
-const ButtonShadow = styled.div`
-  width: 211.83px;
-  height: 60px;
-  position: absolute;
-  left: 0;
-  top: 0;
-
-  background: rgba(76, 111, 255, 0.24);
-  filter: blur(54px);
-  border-radius: 10px;
-`;
-
 const Hero = ({ shortInfo, title, intro, buttonTxt, bgImg }) => {
   return (
     <HeroContainerWrapper>
@@ -105,9 +79,17 @@ const Hero = ({ shortInfo, title, intro, buttonTxt, bgImg }) => {
           {title && <Title>{title}</Title>}
           {intro && <IntroTxt>{intro}</IntroTxt>}
           {buttonTxt && (
-            <MeetButton onClick={() => {}}>
-              Meet our team <ButtonShadow />
-            </MeetButton>
+            <ShadowButton
+              style={{
+                width: '186px',
+                height: '36px',
+                lineHeight: '36px',
+                marginTop: '50px',
+                background: '#4c6fff',
+              }}
+              text='Meet our team'
+              onClick={() => {}}
+            />
           )}
         </HeroContent>
       </HeroContainer>

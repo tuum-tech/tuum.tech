@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import logo from '../assets/img/brand/logo.png';
-import Subscriber from './Subscriber';
+import logo from '../../assets/img/brand/logo.png';
+import Subscriber from '../Subscriber';
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -35,10 +35,6 @@ const FooterLinks = styled.div`
   margin-top: 96px;
 `;
 
-const Logo = styled.img`
-  width: 171px;
-`;
-
 const LogoText = styled.p`
   font-size: 16px;
   line-height: 30px;
@@ -62,11 +58,11 @@ const Footer = ({ hasSubscriber = true }) => {
       <div className='row'>
         <div className='col-lg-5 col-md-4'>
           <div className='row'>
-            <div className='col-sm-6 col-md-12 mt-sm-0 mt-xs-5'>
-              <Logo src={logo} />
+            <div className='col-sm-6 col-md-12'>
+              <img src={logo} width={171} className='mb-5' />
             </div>
             <div className='col-sm-6 col-md-12'>
-              <LogoText className='mt-md-5 mt-lg-5'>
+              <LogoText className='mb-5'>
                 Tuum Technologies is the software engineering leader of the Open
                 Decentralized Internet space.
               </LogoText>
@@ -75,22 +71,22 @@ const Footer = ({ hasSubscriber = true }) => {
         </div>
         <div className='col-lg-7 col-md-8'>
           <div className='row'>
-            <div className='col-lg-3 col-md-3 col-sm-6 mt-sm-4'>
+            <div className='col-lg-3 col-md-3 col-sm-6'>
               <Category>Solutions</Category>
               <FooterLink>Digital Identity</FooterLink>
               <FooterLink>Verifiable Credentials</FooterLink>
               <FooterLink>Personal Data Storage</FooterLink>
-              <FooterLink>Peer-to-Peer Network</FooterLink>
+              <FooterLink className='mb-5'>Peer-to-Peer Network</FooterLink>
             </div>
-            <div className='col-lg-3 col-md-3 col-sm-6 mt-sm-4'>
+            <div className='col-lg-3 col-md-3 col-sm-6'>
               <Category>Products</Category>
               <FooterLink>Profile</FooterLink>
             </div>
-            <div className='col-lg-3 col-md-3 col-sm-6 mt-sm-4'>
+            <div className='col-lg-3 col-md-3 col-sm-6'>
               <Category>Developers</Category>
               <FooterLink>Developer Portal</FooterLink>
             </div>
-            <div className='col-lg-3 col-md-3 col-sm-6 mt-sm-4'>
+            <div className='col-lg-3 col-md-3 col-sm-6'>
               <Category>Learn</Category>
               <FooterLink>Elastos Academy</FooterLink>
             </div>

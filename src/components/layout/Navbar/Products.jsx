@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Products = () => {
   return (
     <li className='nav-item dropdown'>
-      <Link href='/' className='nav-link' data-toggle='dropdown' role='button'>
+      <Link to='/' className='nav-link' data-toggle='dropdown' role='button'>
         <i className='ni ni-ui-04 d-lg-none' />
         <span className='nav-link-inner--text'>Products</span>
       </Link>

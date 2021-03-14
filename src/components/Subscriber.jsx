@@ -1,15 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import ShadowButton from './buttons/ShadowButton';
+
 const SubscriberContainer = styled.div`
   position: absolute;
-  top: -120px;
-  width: 90%;
-  margin: 0 auto 0;
   background: #ffffff;
   border-radius: 10px;
   padding: 53px 5%;
-  max-width: 1140px;
+  top: -120px;
+
+  left: calc(11% + 15px);
+  right: calc(11% + 15px);
+
+  @media only screen and (max-width: 992px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    left: calc(2rem + 15px);
+    right: calc(2rem + 15px);
+  }
 `;
 
 const NewsLetter = styled.div`
@@ -18,7 +27,7 @@ const NewsLetter = styled.div`
     font-style: normal;
     font-weight: 600;
     font-size: 35px;
-    line-height: 45px;
+    line-height: 1.25;
     text-align: center;
   }
 
@@ -27,7 +36,7 @@ const NewsLetter = styled.div`
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 1.87;
     text-align: center;
   }
 
@@ -41,39 +50,18 @@ const NewsLetter = styled.div`
       text-align: left;
     }
   }
+
+  @media only screen and (max-width: 992px) {
+    h1 {
+      font-size: 20px;
+    }
+  }
 `;
 
 const ButtonContainer = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-`;
-
-const SubcribButton = styled.div`
-  margin-top: 30px;
-  position: relative;
-  width: 250px;
-  height: 60px;
-  background: #4c6fff;
-  border-radius: 10px;
-  cursor: pointer;
-  text-align: center;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  color: #ffffff;
-  line-height: 60px;
-`;
-
-const ButtonShadow = styled.div`
-  width: 211.83px;
-  height: 60px;
-  left: 20px;
-  top: 25px;
-
-  background: rgba(76, 111, 255, 0.24);
-  filter: blur(54px);
-  border-radius: 10px;
 `;
 
 const Subscriber = () => {
@@ -84,9 +72,17 @@ const Subscriber = () => {
         <p>Keep up-to-date with us in the open decentralized internet space.</p>
       </NewsLetter>
       <ButtonContainer className='col-lg-6 justify-content-lg-end justify-content-center'>
-        <SubcribButton onClick={() => {}} className='mt-lg-0'>
-          Subscribe Now <ButtonShadow />
-        </SubcribButton>
+        <ShadowButton
+          style={{
+            marginTop: '30px',
+            width: '250px',
+            lineHeight: '60px',
+            height: '60px',
+            background: '#4c6fff',
+          }}
+          text='Subscribte Now'
+          onClick={() => {}}
+        />
       </ButtonContainer>
     </SubscriberContainer>
   );
