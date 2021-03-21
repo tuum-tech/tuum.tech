@@ -8,16 +8,16 @@ const Opportunites = () => {
         <span className='nav-link-inner--text'>Solutions</span>
       </a>
       <div className='dropdown-menu'>
-        <a href='/' className='dropdown-item'>
+        <a href='/solutions/digitalidentity' className='dropdown-item'>
           Digital Identity
         </a>
-        <a href='/' className='dropdown-item'>
+        <a href='/solutions/verifiedcredential' className='dropdown-item'>
           Verifiable Credentials
         </a>
-        <a href='/' className='dropdown-item'>
+        <a href='/solutions/personaldatastorage' className='dropdown-item'>
           Personal Data Storage
         </a>
-        <a href='/' className='dropdown-item'>
+        <a href='/solutions/peertopeernetwork' className='dropdown-item'>
           Peer-to-Peer Network
         </a>
       </div>

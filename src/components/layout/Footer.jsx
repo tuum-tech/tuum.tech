@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import logo from '../../assets/img/brand/logo.png';
+import logo from '../../assets/img/brand/whitelogo.png';
 import Subscriber from '../Subscriber';
 
 const FooterContainer = styled.div`
@@ -59,7 +59,7 @@ const Footer = ({ hasSubscriber = true }) => {
         <div className='col-lg-5 col-md-4'>
           <div className='row'>
             <div className='col-sm-6 col-md-12'>
-              <img src={logo} width={171} className='mb-5' />
+              <img src={logo} width={171} className='mb-5' alt='logo' />
             </div>
             <div className='col-sm-6 col-md-12'>
               <LogoText className='mb-5'>

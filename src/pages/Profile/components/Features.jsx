@@ -1,17 +1,14 @@
 import React from 'react';
 
-import { SplitWrap, FeatureSplitItem } from '../../../components/Features';
 import featureBg from '../../../assets/img/backgrounds/featureBg.png';
+import { SplitWrap, FeatureSplitItem } from '../../../components/Features';
 
 const Features = () => {
   const features = [
     {
       bgImg: featureBg,
-      intro: 'Tuum Product',
-      title: 'Vouch',
-      description:
-        'Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.',
-      onClick: () => {},
+      title: 'Own Your Data',
+      description: 'Information here about Hive 2.0',
     },
   ];
   return (
@@ -23,11 +20,9 @@ const Features = () => {
             features.map((feature) => (
               <FeatureSplitItem
                 imgSrc={feature.bgImg}
-                intro={feature.intro}
                 title={feature.title}
                 description={feature.description}
-                onClick={feature.onClick}
-                btnText='Github'
+                key={feature.title}
               />
             ))}
         </div>

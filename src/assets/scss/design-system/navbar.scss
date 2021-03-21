@@ -200,10 +200,11 @@
   }
 }
 
-.bg-white {
-  .navbar-toggler-icon {
-    background-image: $navbar-light-toggler-icon-bg;
-  }
+.scroll-header .navbar-dark .navbar-toggler-icon {
+  background-image: $navbar-dark-toggler-icon-bg;
+}
+.navbar-dark .navbar-toggler-icon {
+  background-image: $navbar-light-toggler-icon-bg;
 }
 
 @include media-breakpoint-up(md) {

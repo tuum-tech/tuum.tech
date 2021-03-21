@@ -35,6 +35,7 @@ const Features = () => {
                 title={feature.title}
                 description={feature.description}
                 onClick={feature.onClick}
+                btnText='Github'
               />
             ))}
         </div>

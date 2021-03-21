@@ -59,7 +59,7 @@ const OurTeam = () => {
                 className='col-lg-3 col-md-4 col-sm-4 col-xs-6'
               >
                 {member.avatar ? (
-                  <img src={member.avatar} />
+                  <img src={member.avatar} alt='avatar' />
                 ) : (
                   <div className='emptyArea' />
                 )}

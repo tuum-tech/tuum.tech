@@ -144,26 +144,35 @@ const SplitImgItemContainer = styled.div`
   }
 `;
 
-const FeatureSplitItem = ({ imgSrc, title, intro, description, onClick }) => {
+const FeatureSplitItem = ({
+  imgSrc,
+  title,
+  intro,
+  description,
+  onClick,
+  btnText,
+}) => {
   return (
     <SplitImgItemContainer className='split-item'>
       <div className='split-item-content' data-reveal-container='.split-item'>
         <p className='intro'>{intro}</p>
         <p className='title'>{title}</p>
         <p className='txt'>{description}</p>
-        <ShadowButton
-          text='Github'
-          style={{
-            width: '186px',
-            height: '36px',
-            lineHeight: '36px',
-            marginTop: '20px',
-            marginBottom: '20px',
-            background: '#17171B',
-          }}
-          shadowBg='rgba(23, 23, 27, 0.1);'
-          onClick={onClick}
-        />
+        {btnText && (
+          <ShadowButton
+            text={btnText}
+            style={{
+              width: '186px',
+              height: '36px',
+              lineHeight: '36px',
+              marginTop: '20px',
+              marginBottom: '20px',
+              background: '#17171B',
+            }}
+            shadowBg='rgba(23, 23, 27, 0.1);'
+            onClick={onClick}
+          />
+        )}
       </div>
       <div className='split-item-image' data-reveal-container='.split-item'>
         <img src={imgSrc} alt='Features split' />

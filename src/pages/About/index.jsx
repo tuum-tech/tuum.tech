@@ -2,10 +2,6 @@ import React from 'react';
 
 import OurTeam from './components/OurTeam';
 import ContactUs from './components/ContactUs';
-// import NavBar from '../../components/Navbar';
-// import Hero from '../../components/Hero';
-// import Footer from '../../components/Footer';
-// import Section from '../../components/Section';
 import { Footer, Hero, Section, Navbar } from '../../components/layout';
 import SectionBgImg from '../../assets/img/backgrounds/sectionbg.png';
 import heroImg from '../../assets/img/backgrounds/about-hero.png';
@@ -18,12 +14,8 @@ const AboutPage = () => {
         <Hero
           bgImg={heroImg}
           shortInfo='About Tuum'
-          intro={
-            'From developer tools to decentralized products, Tuum Technologies is building' +
-            '\n' +
-            'Elastos blockchain infrastructure and applications for a new web that is more open, ethical, and secure.'
-          }
-          title={'Tuum Technologies is a' + '\n' + 'Web 3.0 Technology Company'}
+          intro='From developer tools to decentralized products, Tuum Technologies is building Elastos blockchain infrastructure and applications for a new web that is more open, ethical, and secure.'
+          title='Tuum Technologies is a Web 3.0 Technology Company'
           buttonTxt='Meet our team'
         />
         <Section
@@ -39,15 +31,6 @@ const AboutPage = () => {
         />
         <OurTeam />
         <ContactUs />
-        {/* <Section
-          title='Our Team'
-          contentText='Our mission is to guide users through a digital transformation from data silos to freedom with responsibility.'
-          maxWidth='600px'
-          padding='138px 0 0'
-        />
-        <Section maxWidth='650px' padding='0 0 138px'>
-          <OurTeam />
-        </Section> */}
       </main>
       <Footer />
     </>

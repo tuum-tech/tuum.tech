@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Home from './pages/Home';
 import About from './pages/About';
+import Profile from './pages/Profile';
 import DigitalIdentity from './pages/DigitalIdentity';
 import VerifiedCredential from './pages/VerifiedCredential';
 import PersonalDataStorage from './pages/PersonalDataStorage';
@@ -12,7 +13,6 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        {/* <Route path='/' exact render={() => <Home />} /> */}
         <Route path='/' exact component={Home} />
         <Route path='/about' exact component={About} />
         <Route
@@ -35,6 +35,7 @@ const App = () => {
           exact
           component={PeerToPeerNetwork}
         />
+        <Route path='/products/profile' exact component={Profile} />
       </Switch>
     </BrowserRouter>
   );

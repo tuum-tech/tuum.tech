@@ -8,9 +8,28 @@
   }
 }
 
-.nav-link {
-  color: white !important;
+.noscroll {
+  .navbar-dark .navbar-nav .nav-link {
+    color: #17171b !important;
+  }
+
+  .navbar-dark .navbar-toggler {
+    color: #17171b !important;
+  }
 }
+
+.scroll-header {
+  .show .navbar-link {
+    color: #17171b !important;
+  }
+  .collapsed {
+    .navbar-dark .navbar-nav .nav-link,
+    .navbar-transparent .navbar-nav .nav-link {
+      color: white !important;
+    }
+  }
+}
+
 @media only screen and (min-width: 992px) {
   .lg-hidden {
     display: none !important;

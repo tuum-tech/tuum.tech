@@ -1,22 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from '../../../assets/img/brand/logo.png';
+import whitelogo from '../../../assets/img/brand/whitelogo.png';
+import blacklogo from '../../../assets/img/brand/blacklogo.png';
 
 import Solutions from './Solutions';
 import Products from './Products';
 import Company from './Company';
+import Developers from './Developers';
+import Learn from './Learn';
 
 import './style.scss';
 
-const HeaderNavBar = () => {
-  const [classNames, setClassNames] = useState('');
+const LogoImg = ({ classNames, navColor }) => {
+  if (classNames === 'scroll-header') {
+    return <img src={whitelogo} alt='logo' />;
+  }
+  return (
+    <img src={navColor === 'transparent' ? whitelogo : blacklogo} alt='logo' />
+  );
+};
+
+const HeaderNavBar = ({ navColor = 'transparent' }) => {
+  const [classNames, setClassNames] = useState('noscroll');
 
   const handleScroll = () => {
     if (window.scrollY > 20) {
       setClassNames('scroll-header');
     } else {
-      setClassNames('');
+      setClassNames('noscroll');
     }
   };
   useEffect(() => {
@@ -29,10 +41,10 @@ const HeaderNavBar = () => {
     <header className={classNames}>
       <nav
         id='navbar-main'
-        className='navbar navbar-dark navbar-main navbar-transparent navbar-expand-lg headroom'
+        className={`navbar navbar-${navColor} navbar-main navbar-expand-lg headroom`}
       >
         <Link className='navbar-brand mr-lg-5 lg-hidden' to='/'>
-          <img src={logo} alt='logo' />
+          <LogoImg classNames={classNames} navColor={navColor} />
         </Link>
         <button
           className='navbar-toggler'
@@ -54,7 +66,7 @@ const HeaderNavBar = () => {
             <div className='row'>
               <div className='col-6 collapse-brand'>
                 <Link to='/'>
-                  <img src={logo} alt='logo' />
+                  <img src={blacklogo} alt='logo' />
                 </Link>
               </div>
               <div className='col-6 collapse-close'>
@@ -74,12 +86,12 @@ const HeaderNavBar = () => {
             </div>
           </div>
           <Link className='navbar-brand mr-lg-5 lg-show' to='/'>
-            <img src={logo} alt='logo' />
+            <LogoImg classNames={classNames} navColor={navColor} />
           </Link>
           <ul className='navbar-nav navbar-nav-hover align-items-lg-center'>
             <Solutions />
             <Products />
-            <li className='nav-item dropdown'>
+            {/* <li className='nav-item dropdown'>
               <a
                 href='https://elastos.academy/'
                 className='nav-link'
@@ -88,17 +100,9 @@ const HeaderNavBar = () => {
                 <i className='ni ni-collection d-lg-none' />
                 <span className='nav-link-inner--text'>Developers</span>
               </a>
-            </li>
-            <li className='nav-item dropdown'>
-              <a
-                href='https://elastos.academy/'
-                className='nav-link'
-                role='button'
-              >
-                <i className='ni ni-collection d-lg-none' />
-                <span className='nav-link-inner--text'>Learn</span>
-              </a>
-            </li>
+            </li> */}
+            <Developers />
+            <Learn />
             <Company />
           </ul>
           {/* <SocialButtons/> */}

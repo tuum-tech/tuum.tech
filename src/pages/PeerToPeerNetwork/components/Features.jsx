@@ -26,16 +26,6 @@ const CheckItem = styled.div`
 `;
 
 const Features = () => {
-  const features = [
-    {
-      bgImg: featureBg,
-      intro: 'Tuum Product',
-      title: 'Vouch',
-      description:
-        'Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.',
-      onClick: () => {},
-    },
-  ];
   return (
     <SplitWrap>
       <div className='features-split-inner section-inner'>

@@ -1,16 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { Navbar, Footer, Hero } from '../../components/layout';
+import WhiteBoxes from './components/WhiteBoxes';
+import Hero from './components/Hero';
+import Explain from './components/Explain';
+import Technologies from './components/Technologies';
 import Features from './components/Features';
-import ExplorerMore from './components/ExplorerMore';
+
+import { Navbar, Footer } from '../../components/layout';
 
 const DisplayText = styled.div`
   text-align: center;
   position: relative;
   width: 88%;
   max-width: 950px;
-  margin: 130px auto 0px;
+  margin: 105px auto;
 
   font-family: Rubik;
   font-style: normal;
@@ -24,17 +28,22 @@ const DisplayText = styled.div`
   }
 `;
 
-const VerifiedCredential = () => {
+const VerifiedCredentialPage = () => {
   return (
     <>
-      <Navbar />
+      <Navbar navColor='dark' />
       <main>
         <Hero
-          shortInfo='Solutions'
-          // bgImg={heroImg}
-          title='Verifiable Credentials'
-          intro='Tuum Technologies is the software engineering leader of the Open Decentralized Internet space. Our suite of Elastos powered products and services help developers build decentralized applications and enable individuals to control data on an open web.'
+          shortInfo='Profile'
+          title={'A better way to be online'}
+          intro={
+            'Having multiple profiles is messy. Your personal information is copied and stored on every app. Profile gives you total control of your digital world, in one place. Finally unlock the power of your content online.'
+          }
+          buttonTxt='Get Started'
         />
+        <WhiteBoxes />
+        <Technologies />
+        <Explain />
         <DisplayText>
           Tuum Technologies is the world’s leading provider of Elastos powered
           solutions, using education and opportunity to advance projects
@@ -47,11 +56,10 @@ const VerifiedCredential = () => {
           decentralized Internet for all.
         </DisplayText>
         <Features />
-        <ExplorerMore />
       </main>
-      <Footer hasSubscriber={false} />
+      <Footer />
     </>
   );
 };
 
-export default VerifiedCredential;
+export default VerifiedCredentialPage;
