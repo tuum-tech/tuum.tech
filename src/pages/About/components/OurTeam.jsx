@@ -44,7 +44,7 @@ const OurTeam = () => {
   return (
     <>
       <Section
-        title='Our Team'
+        title='Team'
         contentText='Our mission is to guide users through a digital transformation from data silos to freedom with responsibility.'
         maxWidth='600px'
         padding='138px 0 0'

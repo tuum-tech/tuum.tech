@@ -1,92 +1,111 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { SplitWrap, SplitImgItemContainer } from '../../../components/Features';
-import ShadowButton from '../../../components/buttons/ShadowButton';
-import featureBg from '../../../assets/img/backgrounds/featureBg.png';
-import check from '../../../assets/img/icons/check.png';
+import accessibility from '../../../assets/img/hive/accessibility.png';
+import datasendbox from '../../../assets/img/hive/data-sendboxing.png';
+import didintegration from '../../../assets/img/hive/did-integraiton.png';
+import financialinteraction from '../../../assets/img/hive/financial-interaction.png';
+import usercustomization from '../../../assets/img/hive/user-customization.png';
+import vaultselect from '../../../assets/img/hive/vault-selection.png';
 
-const CheckItem = styled.div`
+const Container = styled.div`
+  margin: 0 auto;
+  padding: 0px 11%;
   display: flex;
-  align-items: center;
-  margin-top: 15px;
+`;
+
+const Section = styled.div`
+  width: 33%;
+  display: block;
+  margin-bottom: 70px;
+
   img {
-    width: 20px;
-    height: 20px;
-    margin-right: 12px;
+    height: 76px;
+    width: auto;
+    margin-bottom: 28px;
   }
-  p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 30px;
+
+  .title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #17171b;
+    margin-bottom: 21px;
+  }
+
+  .text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+
     color: #4a5568;
-    margin: 0;
+    max-width: 300px;
   }
 `;
 
-const Features = () => {
+const Explain = () => {
+  const firstRows = [
+    {
+      title: 'Vault Selection',
+      img: vaultselect,
+      text:
+        'Elastos Hive allows users to select their own storage location, referred to as a Vault.',
+    },
+    {
+      title: 'Accessibility',
+      img: accessibility,
+      text: 'Accessibility',
+    },
+    {
+      title: 'Data Sandboxing',
+      img: datasendbox,
+      text:
+        'Elastos Hive sandboxes data corresponding to each application and DID for maximum security.',
+    },
+  ];
+  const secondRows = [
+    {
+      title: 'DID Integration',
+      img: didintegration,
+      text:
+        'All Elastos Hive Vaults are linked to and accessible exclusively via Elastos Decentralized Identities (DIDs) , providing a secure system of ownership backed by the hashpower of the Bitcoin blockchain.',
+    },
+    {
+      title: 'User Customization',
+      img: usercustomization,
+      text:
+        'Access controls allow data-owning individuals to leverage Elastos Decentralized Identity (DID) functions to select other users that can read or contribute to his or her data, as well as to specify conditions for which reading and contribution are allowed and disallowed.',
+    },
+    {
+      title: 'Financial Incentives',
+      img: financialinteraction,
+      text:
+        'Increased attention is being dedicated to incentivizing and growing a decentralized community of Hive Nodes by equipping Vault providers with a built-in payment module.',
+    },
+  ];
   return (
-    <SplitWrap>
-      <div className='features-split-inner section-inner'>
-        <div className='split-wrap'>
-          <SplitImgItemContainer className='split-item'>
-            <div
-              className='split-item-content'
-              data-reveal-container='.split-item'
-            >
-              <p className='title'>Elastos Hive JS SDK</p>
-              <p className='txt'>
-                Find out how Tuum Technologies’ products are helping developers
-                benefit from blockchain technology on an open Internet.Find out
-                how Tuum Technologies’ products are helping developers benefit
-                from blockchain technology on an open Internet.Find out how Tuum
-                Technologies’ products are helping developers benefit from
-                blockchain technology on an open Internet.
-              </p>
-              <CheckItem>
-                <img src={check} alt='check' />
-                <p>Find out how Tuum</p>
-              </CheckItem>
-              <CheckItem>
-                <img src={check} alt='check' />
-                <p>Find out how Tuum</p>
-              </CheckItem>
-              <CheckItem>
-                <img src={check} alt='check' />
-                <p>Find out how Tuum</p>
-              </CheckItem>
-              <CheckItem>
-                <img src={check} alt='check' />
-                <p>Find out how Tuum</p>
-              </CheckItem>
-
-              <ShadowButton
-                text='Github'
-                style={{
-                  width: '186px',
-                  height: '36px',
-                  lineHeight: '36px',
-                  marginTop: '20px',
-                  marginBottom: '20px',
-                  background: '#17171B',
-                }}
-                shadowBg='rgba(23, 23, 27, 0.1);'
-                onClick={() => {}}
-              />
-            </div>
-            <div
-              className='split-item-image'
-              data-reveal-container='.split-item'
-            >
-              <img src={featureBg} alt='Features split' />
-              <div className='shadow' />
-            </div>
-          </SplitImgItemContainer>
-        </div>
-      </div>
-    </SplitWrap>
+    <>
+      <Container>
+        {firstRows.map((item) => (
+          <Section>
+            <img src={item.img} alt='feature' />
+            <p className='title'>{item.title}</p>
+            <p className='text'>{item.text}</p>
+          </Section>
+        ))}
+      </Container>
+      <Container>
+        {secondRows.map((item) => (
+          <Section>
+            <img src={item.img} alt='feature' />
+            <p className='title'>{item.title}</p>
+            <p className='text'>{item.text}</p>
+          </Section>
+        ))}
+      </Container>
+    </>
   );
 };
 
-export default Features;
+export default Explain;

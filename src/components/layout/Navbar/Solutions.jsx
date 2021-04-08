@@ -1,25 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Opportunites = () => {
   return (
     <li className='nav-item dropdown'>
-      <a href='/' className='nav-link' data-toggle='dropdown' role='button'>
+      <Link to='/' className='nav-link' data-toggle='dropdown' role='button'>
         <i className='ni ni-collection d-lg-none' />
         <span className='nav-link-inner--text'>Solutions</span>
-      </a>
+      </Link>
       <div className='dropdown-menu'>
-        <a href='/solutions/digitalidentity' className='dropdown-item'>
+        <Link to='/solutions/digitalidentity' className='dropdown-item'>
           Digital Identity
-        </a>
-        <a href='/solutions/verifiedcredential' className='dropdown-item'>
+        </Link>
+        <Link to='/solutions/verifiedcredential' className='dropdown-item'>
           Verifiable Credentials
-        </a>
-        <a href='/solutions/personaldatastorage' className='dropdown-item'>
+        </Link>
+        <Link to='/solutions/personaldatastorage' className='dropdown-item'>
           Personal Data Storage
-        </a>
-        <a href='/solutions/peertopeernetwork' className='dropdown-item'>
-          Peer-to-Peer Network
-        </a>
+        </Link>
       </div>
     </li>
   );

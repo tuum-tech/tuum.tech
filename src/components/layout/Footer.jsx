@@ -2,11 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 
 import logo from '../../assets/img/brand/whitelogo.png';
-import Subscriber from '../Subscriber';
 
-const FooterContainer = styled.div`
+export const FooterContainer = styled.div`
   width: 100%;
-  padding: 168px 11% 42px;
+  padding: 200px 11% 42px;
   background: #17171b;
   position: relative;
 
@@ -51,10 +50,11 @@ const Category = styled.p`
   margin-bottom: 20px;
 `;
 
-const Footer = ({ hasSubscriber = true }) => {
+const Footer = () => {
   return (
-    <FooterContainer style={{ marginTop: hasSubscriber ? '125px' : '0' }}>
-      {hasSubscriber && <Subscriber />}
+    // <FooterContainer style={{ marginTop: hasSubscriber ? '125px' : '0' }}>
+    //   {hasSubscriber && <Subscriber />}
+    <>
       <div className='row'>
         <div className='col-lg-5 col-md-4'>
           <div className='row'>
@@ -99,7 +99,8 @@ const Footer = ({ hasSubscriber = true }) => {
         <FooterLink href='/'>Terms of Service</FooterLink>
         <FooterLink href='/'>Contact</FooterLink>
       </FooterLinks>
-    </FooterContainer>
+    </>
+    // </FooterContainer>
   );
 };
 

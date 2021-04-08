@@ -1,23 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import solutionimg from '../../../assets/img/identity.png';
+import profileimg from '../../../assets/img/nav/Profile.png';
+import idimg from '../../../assets/img/nav/ID.png';
 
 const Products = () => {
   const productsMenu = [
     {
       link: '/products/profile',
-      imgSrc: solutionimg,
+      imgSrc: profileimg,
       title: 'Profile',
       description:
-        'We provide an online digital identity hub managed by the users, and for the users, where profiles',
+        'A new type of digital identity owned by you - where genuine connections happen, and real-world networking begins online.',
     },
     {
-      link: '',
-      imgSrc: solutionimg,
-      title: 'Vouch',
+      link: 'https://www.getdids.com/',
+      imgSrc: idimg,
+      title: 'getdids.com',
       description:
-        'We provide an online digital identity hub managed by the users, and for the users, where profiles ',
+        'Get your very own unique proof of ownership digital identity using Elastos Dencentralized Identity (DID).',
     },
   ];
   return (
@@ -31,11 +32,11 @@ const Products = () => {
           {productsMenu &&
             productsMenu.length > 0 &&
             productsMenu.map((product) => (
-              <a
-                href={product.link}
+              <Link
+                to={product.link}
                 className='media d-flex align-items-center'
               >
-                <div className='icon icon-shape bg-gradient-primary rounded-circle text-white'>
+                <div>
                   <img
                     src={product.imgSrc}
                     width='53px'
@@ -51,7 +52,7 @@ const Products = () => {
                     {product.description}
                   </p>
                 </div>
-              </a>
+              </Link>
             ))}
         </div>
       </div>

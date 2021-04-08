@@ -14,7 +14,7 @@ const HeroContainer = styled.div`
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: cover !important;
-  padding-top: 88px;
+  padding-top: 38px;
 
   width: 100%;
   padding-left: 11%;
@@ -29,7 +29,7 @@ const HeroContainer = styled.div`
 const HeroContent = styled.div`
   display: block;
   color: white;
-  max-width: 716px;
+  max-width: 616px;
   width: 88%;
   padding: 108px 0 107px;
   color: #ffffff;
@@ -54,6 +54,11 @@ const Title = styled.p`
   display: flex;
   align-items: center;
   color: #ffffff;
+
+  @media only screen and (max-width: 992px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
 `;
 
 const IntroTxt = styled.p`
@@ -66,7 +71,14 @@ const IntroTxt = styled.p`
   color: #d5d5dc;
 `;
 
-const Hero = ({ shortInfo, title, intro, buttonTxt, bgImg }) => {
+const Hero = ({
+  shortInfo,
+  title,
+  intro,
+  buttonTxt,
+  bgImg,
+  leftAlign = true,
+}) => {
   return (
     <HeroContainerWrapper>
       <HeroContainer
@@ -74,7 +86,13 @@ const Hero = ({ shortInfo, title, intro, buttonTxt, bgImg }) => {
           background: `url(${bgImg})`,
         }}
       >
-        <HeroContent>
+        <HeroContent
+          style={{
+            marginLeft: leftAlign ? 0 : 'auto',
+            marginRight: leftAlign ? 0 : 'auto',
+            textAlign: leftAlign ? 'left' : 'center',
+          }}
+        >
           {shortInfo && <ShortIntro>{shortInfo}</ShortIntro>}
           {title && <Title>{title}</Title>}
           {intro && <IntroTxt>{intro}</IntroTxt>}

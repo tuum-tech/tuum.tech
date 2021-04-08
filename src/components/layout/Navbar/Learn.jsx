@@ -1,16 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Learn = () => {
   return (
     <li className='nav-item dropdown'>
-      <a href='/' className='nav-link' data-toggle='dropdown' role='button'>
+      <Link href='/' className='nav-link' data-toggle='dropdown' role='button'>
         <i className='ni ni-collection d-lg-none' />
         <span className='nav-link-inner--text'>Learn</span>
-      </a>
+      </Link>
       <div className='dropdown-menu'>
-        <a href='/solutions/digitalidentity' className='dropdown-item'>
+        <Link href='/' className='dropdown-item'>
           Elastos Academy
-        </a>
+        </Link>
+        <Link href='/' className='dropdown-item'>
+          Elastos Info
+        </Link>
+        <Link href='/' className='dropdown-item'>
+          Elastos Official Site
+        </Link>
       </div>
     </li>
   );

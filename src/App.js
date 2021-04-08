@@ -7,7 +7,7 @@ import Profile from './pages/Profile';
 import DigitalIdentity from './pages/DigitalIdentity';
 import VerifiedCredential from './pages/VerifiedCredential';
 import PersonalDataStorage from './pages/PersonalDataStorage';
-import PeerToPeerNetwork from './pages/PeerToPeerNetwork';
+// import PeerToPeerNetwork from './pages/PeerToPeerNetwork';
 
 const App = () => {
   return (
@@ -30,11 +30,11 @@ const App = () => {
           exact
           component={PersonalDataStorage}
         />
-        <Route
+        {/* <Route
           path='/solutions/peertopeernetwork'
           exact
           component={PeerToPeerNetwork}
-        />
+        /> */}
         <Route path='/products/profile' exact component={Profile} />
       </Switch>
     </BrowserRouter>

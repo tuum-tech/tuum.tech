@@ -1,50 +1,24 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import {
-  SplitWrap,
-  FeatureSplitItem,
-  SplitImgItemContainer,
-} from '../../../components/Features';
-import ShadowButton from '../../../components/buttons/ShadowButton';
-import featureBg from '../../../assets/img/backgrounds/featureBg.png';
-import check from '../../../assets/img/icons/check.png';
-
-const CheckItem = styled.div`
-  display: flex;
-  align-items: center;
-  margin-top: 15px;
-  img {
-    width: 20px;
-    height: 20px;
-    margin-right: 12px;
-  }
-  p {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 30px;
-    color: #4a5568;
-    margin: 0;
-  }
-`;
+import { SplitWrap, FeatureSplitItem } from '../../../components/Features';
+import getdidsImg from '../../../assets/img/features/feature-getdids.png';
+import assistImg from '../../../assets/img/features/feature-assist.png';
 
 const Features = () => {
   const features = [
     {
-      bgImg: featureBg,
-      intro: 'Featured Product',
-      title: 'getdids.com',
+      bgImg: assistImg,
+      title: 'Assist',
       description:
-        'Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.',
+        'Assist is a service that provides simplicity and mitigates the difficulties for users associated with blockchain-based applications. This product is based on blockchain technology and is a tool to support the publication of Decentralized Identities (DIDs). As with many pioneering technologies, pain points lead to a sub- optimal user experience. Assist has been developed to operate in the background and seamlessly execute functions that enhance user experience for newcomers to digital identity.',
       onClick: () => {},
     },
     {
-      bgImg: featureBg,
-      intro: 'Featured Product',
-      title: 'Profile',
+      bgImg: getdidsImg,
+      title: 'getdids.com',
+      introTwo: 'At getdids.com we keep it very simple',
       description:
-        'Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.',
+        'Log in, save your security words, and publish a new digital identity to the blockchain – that’s it! Now you have your very own unique proof of ownership and can begin owning your data.',
       onClick: () => {},
     },
   ];
@@ -57,67 +31,13 @@ const Features = () => {
             features.map((feature) => (
               <FeatureSplitItem
                 imgSrc={feature.bgImg}
-                intro={feature.intro}
+                introTwo={feature.introTwo}
                 title={feature.title}
                 description={feature.description}
                 onClick={feature.onClick}
                 btnText='Github'
               />
             ))}
-
-          <SplitImgItemContainer className='split-item'>
-            <div
-              className='split-item-content'
-              data-reveal-container='.split-item'
-            >
-              <p className='title'>Elastos DID JS SDK</p>
-              <p className='txt'>
-                Find out how Tuum Technologies’ products are helping developers
-                benefit from blockchain technology on an open Internet.Find out
-                how Tuum Technologies’ products are helping developers benefit
-                from blockchain technology on an open Internet.Find out how Tuum
-                Technologies’ products are helping developers benefit from
-                blockchain technology on an open Internet.
-              </p>
-              <CheckItem>
-                <img src={check} alt='check' />
-                <p>Find out how Tuum</p>
-              </CheckItem>
-              <CheckItem>
-                <img src={check} alt='check' />
-                <p>Find out how Tuum</p>
-              </CheckItem>
-              <CheckItem>
-                <img src={check} alt='check' />
-                <p>Find out how Tuum</p>
-              </CheckItem>
-              <CheckItem>
-                <img src={check} alt='check' />
-                <p>Find out how Tuum</p>
-              </CheckItem>
-
-              <ShadowButton
-                text='Github'
-                style={{
-                  width: '186px',
-                  height: '36px',
-                  lineHeight: '36px',
-                  marginTop: '20px',
-                  marginBottom: '20px',
-                  background: '#17171B',
-                }}
-                shadowBg='rgba(23, 23, 27, 0.1);'
-                onClick={() => {}}
-              />
-            </div>
-            <div
-              className='split-item-image'
-              data-reveal-container='.split-item'
-            >
-              <img src={featureBg} alt='Features split' />
-              <div className='shadow' />
-            </div>
-          </SplitImgItemContainer>
         </div>
       </div>
     </SplitWrap>

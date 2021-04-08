@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import imgSrc from '../../../assets/img/features/new-type-digital.png';
+import profileimg from '../../../assets/img/features/feature-profile.png';
+import digitalimg from '../../../assets/img/features/new-type-digital.png';
 
 const Container = styled.div`
   width: 100%;
@@ -39,6 +40,10 @@ const Text = styled.p`
   }
 `;
 
+const TextImg = styled.img`
+  width: 90%;
+  margin-top: 100px;
+`;
 const Explain = () => {
   return (
     <Container className='row'>
@@ -48,9 +53,10 @@ const Explain = () => {
           Profile gives you total control of your digital world, in one place.
           Finally unlock the power of your data and digital content.
         </Text>
+        <TextImg src={digitalimg} alt='digitalimg' />
       </div>
       <div className='col-lg-6'>
-        <img src={imgSrc} width='100%' className='mt-3' alt='explain' />
+        <img src={profileimg} width='100%' className='mt-3' alt='explain' />
       </div>
     </Container>
   );

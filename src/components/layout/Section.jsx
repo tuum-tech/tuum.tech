@@ -14,7 +14,7 @@ const SectionBgColorcontainer = styled.div`
 `;
 
 const SectionContent = styled.div`
-  width: 88%;
+  width: 100%;
   margin: 0 auto;
 `;
 
@@ -27,6 +27,7 @@ const SectionText = styled.p`
   display: flex;
   align-items: center;
   text-align: center;
+  color: #4a5568;
 `;
 
 const SectionTitle = styled.p`
@@ -40,26 +41,22 @@ const SectionTitle = styled.p`
 `;
 
 const Section = ({
+  containerStyle,
   contentText,
   bgColor = 'transparent',
-  txtColor = '#4a5568',
-  bgImg,
+  txtStyle,
   maxWidth = '100%',
   children,
   title,
   padding = '138px 0',
 }) => {
   return (
-    <SectionImgContainer
-      style={{
-        background: bgImg ? `url(${bgImg})` : 'transparent',
-      }}
-    >
+    <SectionImgContainer style={containerStyle}>
       <SectionBgColorcontainer style={{ backgroundColor: bgColor }}>
         <SectionContent style={{ maxWidth: maxWidth, padding: padding }}>
           {title && <SectionTitle>{title}</SectionTitle>}
           {contentText && (
-            <SectionText style={{ color: txtColor }}>{contentText}</SectionText>
+            <SectionText style={txtStyle}>{contentText}</SectionText>
           )}
           {children && children}
         </SectionContent>

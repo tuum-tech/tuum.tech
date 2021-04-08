@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// import bgImg from '../assets/img/mainbg.png';
 import ShadowButton from './buttons/ShadowButton';
 
-const SubscriberContainer = styled.div`
+const SubscriberContainerWrapper = styled.div`
   position: absolute;
-  background: #ffffff;
+  background: #4c6fff;
   border-radius: 10px;
-  padding: 53px 5%;
-  top: -120px;
 
+  top: -120px;
   left: calc(11% + 15px);
   right: calc(11% + 15px);
 
@@ -21,20 +21,30 @@ const SubscriberContainer = styled.div`
   }
 `;
 
+const SubscriberContainer = styled.div`
+  border-radius: 10px;
+  padding: 53px 5%;
+
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+`;
+
 const NewsLetter = styled.div`
+  color: white;
+  font-style: normal;
+  font-weight: normal;
+
   h1 {
-    colro: 17171b;
-    font-style: normal;
+    color: white;
     font-weight: 600;
     font-size: 35px;
     line-height: 1.25;
     text-align: center;
+    margin-bottom: 13px;
   }
 
   p {
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: normal;
     font-size: 16px;
     line-height: 1.87;
     text-align: center;
@@ -66,25 +76,36 @@ const ButtonContainer = styled.div`
 
 const Subscriber = () => {
   return (
-    <SubscriberContainer className='row'>
-      <NewsLetter className='col-lg-6'>
-        <h1>Subscribe to our newsletter</h1>
-        <p>Keep up-to-date with us in the open decentralized internet space.</p>
-      </NewsLetter>
-      <ButtonContainer className='col-lg-6 justify-content-lg-end justify-content-center'>
-        <ShadowButton
-          style={{
-            marginTop: '30px',
-            width: '250px',
-            lineHeight: '60px',
-            height: '60px',
-            background: '#4c6fff',
-          }}
-          text='Subscribte Now'
-          onClick={() => {}}
-        />
-      </ButtonContainer>
-    </SubscriberContainer>
+    <SubscriberContainerWrapper>
+      <SubscriberContainer
+        className='row'
+        // style={{
+        //   background: `url(${bgImg})`,
+        // }}
+      >
+        <NewsLetter className='col-lg-6'>
+          <h1>Subscribe to our newsletter</h1>
+          <p>
+            Keep up-to-date with us in the open decentralized internet space.
+          </p>
+        </NewsLetter>
+        <ButtonContainer className='col-lg-6 justify-content-lg-end justify-content-center'>
+          <ShadowButton
+            style={{
+              marginTop: '30px',
+              width: '250px',
+              lineHeight: '60px',
+              height: '60px',
+              background: 'white',
+              color: '#4C6FFF',
+              fontSize: '16px',
+            }}
+            text='Subscribte Now'
+            onClick={() => {}}
+          />
+        </ButtonContainer>
+      </SubscriberContainer>
+    </SubscriberContainerWrapper>
   );
 };
 

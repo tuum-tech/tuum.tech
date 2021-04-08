@@ -5,23 +5,33 @@ import ShadowButton from '../../../components/buttons/ShadowButton';
 import heroimg from '../../../assets/img/backgrounds/profile-hero.png';
 
 const HeroContainer = styled.div`
-  background-repeat: no-repeat !important;
-  background-position-x: 80% !important;
-  background-position-y: 100px !important;
-
-  min-height: 664px;
+  min-height: 764px;
   width: 100%;
-  padding: 140px 11% 0px 11%;
+  padding: 80px 11% 0px 11%;
   margin-left: 0px;
   margin-right: 0px;
+  position: relative;
+
+  img {
+    position: absolute;
+    right: 9%;
+    top: -30px;
+    max-width: 600px;
+    width: 50%;
+  }
 
   @media only screen and (max-width: 992px) {
     padding-left: 2rem;
     padding-right: 2rem;
+
+    img {
+      bottom: 0px;
+      right: 0px;
+      top: auto;
+      width: 100%;
+    }
   }
 `;
-
-const HeroContent = styled.div``;
 
 const ShortIntro = styled.p`
   font-family: SF Pro Display;
@@ -57,13 +67,9 @@ const IntroTxt = styled.p`
 
 const Hero = ({ shortInfo, title, intro, buttonTxt, bgImg }) => {
   return (
-    <HeroContainer
-      className='row'
-      style={{
-        background: `url(${heroimg})`,
-      }}
-    >
-      <HeroContent className='col-lg-5'>
+    <HeroContainer className='row'>
+      <img src={heroimg} alt='hero' />
+      <div className='col-lg-5'>
         {shortInfo && <ShortIntro>{shortInfo}</ShortIntro>}
         {title && <Title>{title}</Title>}
         {intro && <IntroTxt>{intro}</IntroTxt>}
@@ -80,7 +86,7 @@ const Hero = ({ shortInfo, title, intro, buttonTxt, bgImg }) => {
             onClick={() => {}}
           />
         )}
-      </HeroContent>
+      </div>
     </HeroContainer>
   );
 };
