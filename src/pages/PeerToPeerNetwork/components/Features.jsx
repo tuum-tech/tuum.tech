@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { SplitWrap, SplitImgItemContainer } from '../../../components/Features';
 import ShadowButton from '../../../components/buttons/ShadowButton';
 import featureBg from '../../../assets/img/backgrounds/featureBg.png';
-import check from '../../../assets/img/icons/check.png';
+import check from '../../../assets/img/check.png';
 
 const CheckItem = styled.div`
   display: flex;
@@ -30,7 +30,7 @@ const Features = () => {
     <SplitWrap>
       <div className='features-split-inner section-inner'>
         <div className='split-wrap'>
-          <SplitImgItemContainer className='split-item'>
+          <SplitItem className='split-item'>
             <div
               className='split-item-content'
               data-reveal-container='.split-item'
@@ -82,7 +82,7 @@ const Features = () => {
               <img src={featureBg} alt='Features split' />
               <div className='shadow' />
             </div>
-          </SplitImgItemContainer>
+          </SplitItem>
         </div>
       </div>
     </SplitWrap>

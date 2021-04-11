@@ -6,8 +6,7 @@ import martin from '../assets/img/team/martin.png';
 import ricardo from '../assets/img/team/ricardo.png';
 import wakas from '../assets/img/team/wakas.png';
 import yael from '../assets/img/team/yael.png';
-import anony1 from '../assets/img/team/anony1.png';
-import anony2 from '../assets/img/team/anony2.png';
+import anony from '../assets/img/identity.png';
 
 const teamData = [
   {
@@ -43,7 +42,7 @@ const teamData = [
   {
     name: 'Denis Vasilev',
     role: 'Developer',
-    avatar: anony1,
+    avatar: anony,
   },
   {
     name: 'Faizan Atiq',
@@ -58,12 +57,12 @@ const teamData = [
   {
     name: 'Stephon Cheek',
     role: 'Developer',
-    avatar: anony2,
+    avatar: anony,
   },
   {
     name: 'Carl Duranleau',
     role: 'Developer',
-    avatar: anony1,
+    avatar: anony,
   },
 ];
 

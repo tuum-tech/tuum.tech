@@ -3,14 +3,16 @@ import styled from 'styled-components';
 
 import ShadowButton from '../../../components/buttons/ShadowButton';
 import heroimg from '../../../assets/img/backgrounds/profile-hero.png';
+import { HeaderTitle, ContentText } from '../../../components/Texts';
 
 const HeroContainer = styled.div`
-  min-height: 764px;
-  width: 100%;
-  padding: 80px 11% 0px 11%;
-  margin-left: 0px;
-  margin-right: 0px;
+  min-height: 880px;
+
   position: relative;
+  padding: 78px 2rem 107px;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
 
   img {
     position: absolute;
@@ -42,26 +44,14 @@ const ShortIntro = styled.p`
   color: #17171b;
 `;
 
-const Title = styled.p`
-  font-family: SF Pro Display;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 55px;
-  margin-top: 15px;
-
+const Title = styled(HeaderTitle)`
   display: flex;
   align-items: center;
   color: #17171b;
 `;
 
-const IntroTxt = styled.p`
+const IntroTxt = styled(ContentText)`
   margin-top: 30px;
-  font-family: SF Pro Display;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 30px;
   color: #4a5568;
 `;
 

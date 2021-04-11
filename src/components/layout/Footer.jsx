@@ -1,17 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import logo from '../../assets/img/brand/whitelogo.png';
+import logo from '../../assets/img/brand-whitelogo.png';
 
 export const FooterContainer = styled.div`
+  padding: 80px 2rem 0px;
   width: 100%;
-  padding: 200px 11% 42px;
+  margin: 0 auto;
+  display: block;
+
   background: #17171b;
   position: relative;
+`;
 
-  @media only screen and (max-width: 992px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
+const FooterContent = styled.div`
+  display: block;
+  margin: 150px auto 0px;
+
+  @media only screen and (min-width: 1330px) {
+    max-width: calc(1240px - 4rem);
+    width: calc(100% - 4rem);
   }
 `;
 
@@ -31,7 +39,8 @@ const FooterLink = styled.a`
 
 const FooterLinks = styled.div`
   display: flex;
-  margin-top: 96px;
+  margin-top: 36px;
+  padding-bottom: 30px;
 `;
 
 const LogoText = styled.p`
@@ -52,9 +61,7 @@ const Category = styled.p`
 
 const Footer = () => {
   return (
-    // <FooterContainer style={{ marginTop: hasSubscriber ? '125px' : '0' }}>
-    //   {hasSubscriber && <Subscriber />}
-    <>
+    <FooterContent>
       <div className='row'>
         <div className='col-lg-5 col-md-4'>
           <div className='row'>
@@ -99,8 +106,7 @@ const Footer = () => {
         <FooterLink href='/'>Terms of Service</FooterLink>
         <FooterLink href='/'>Contact</FooterLink>
       </FooterLinks>
-    </>
-    // </FooterContainer>
+    </FooterContent>
   );
 };
 

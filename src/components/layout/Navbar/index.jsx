@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import whitelogo from '../../../assets/img/brand/whitelogo.png';
-import blacklogo from '../../../assets/img/brand/blacklogo.png';
+import whitelogo from '../../../assets/img/brand-whitelogo.png';
+import blacklogo from '../../../assets/img/brand-blacklogo.png';
 
 import Solutions from './Solutions';
 import Products from './Products';

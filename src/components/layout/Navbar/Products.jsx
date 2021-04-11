@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import profileimg from '../../../assets/img/nav/Profile.png';
-import idimg from '../../../assets/img/nav/ID.png';
+import profileimg from '../../../assets/img/nav-Profile.png';
+import idimg from '../../../assets/img/nav-ID.png';
 
 const Products = () => {
   const productsMenu = [

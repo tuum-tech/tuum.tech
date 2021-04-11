@@ -1,6 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
+import { SectionText, SectionTitle } from '../Texts';
 
 const SectionImgContainer = styled.div`
   width: 100%;
@@ -16,28 +17,6 @@ const SectionBgColorcontainer = styled.div`
 const SectionContent = styled.div`
   width: 100%;
   margin: 0 auto;
-`;
-
-const SectionText = styled.p`
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 30px;
-
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #4a5568;
-`;
-
-const SectionTitle = styled.p`
-  font-style: normal;
-  font-weight: 600;
-  font-size: 50px;
-  line-height: 55px;
-  text-align: center;
-  color: #17171b;
-  margin-bottom: 30px;
 `;
 
 const Section = ({

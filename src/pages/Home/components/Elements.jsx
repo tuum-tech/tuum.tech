@@ -1,0 +1,118 @@
+import styled from 'styled-components';
+import { SectionTitle } from '../../../components/Texts';
+
+export const LinkButton = styled.button`
+  outline: none;
+  border: transparent;
+  background: transparent;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 25px;
+
+  color: #4c6fff;
+`;
+
+// export const FeaturesContainer = styled.div`
+//   position: relative;
+//   width: 100%;
+
+//   width: 100%;
+//   max-width: 1240px;
+//   margin: 0 auto;
+//   display: block;
+// `;
+
+export const WhiteBoxArea = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  min-height: 217px;
+  margin-top: -180px;
+
+  position: relative;
+  padding: 0px;
+
+  @media only screen and (max-width: 992px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    display: block;
+  }
+`;
+
+export const WhiteBox = styled.div`
+  width: 30%;
+  background: #ffffff;
+  border-radius: 14px;
+  min-height: 217px;
+  padding: 93px 27px 70px;
+  position: relative;
+
+  box-shadow: 0px 20px 50px 10px rgba(193, 203, 244, 0.2);
+  margin-bottom: 100px;
+
+  font-family: 'SF Pro Display';
+  font-style: normal;
+  text-align: center;
+
+  .title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+
+    color: #000000;
+  }
+
+  .description {
+    margin-top: 13px;
+    margin-bottom: 13px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+
+    color: #4a5568;
+  }
+
+  a {
+    display: block;
+    position: absolute;
+    bottom: 27px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+    color: #4c6fff;
+
+    text-align: center;
+
+    &:hover {
+      color: #4c6fff;
+      text-decoration: none;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 63px;
+  }
+`;
+
+export const CenterScriber = styled.div`
+  position: relative;
+  margin-top: 250px;
+
+  & > div:first-child {
+    left: 0 !important;
+    right: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    transform: none !important;
+  }
+`;

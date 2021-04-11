@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div`
+const Container = styled.button`
   border-radius: 10px;
   text-align: center;
   font-style: normal;
@@ -9,6 +9,8 @@ const Container = styled.div`
   font-size: 12px;
   color: #ffffff;
   position: relative;
+
+  cursor: pointer;
 `;
 
 const Shadow = styled.div`
@@ -28,10 +30,19 @@ const ShadowButton = ({
   onClick,
   style,
   shadowBg = 'rgba(76, 111, 255, 0.24)',
+  id = 'shadowbutton',
+  hasSahdow = false,
+  className = '',
 }) => {
   return (
-    <Container onClick={onClick} style={style}>
-      {text} <Shadow style={{ background: shadowBg }} />
+    <Container
+      onClick={onClick}
+      style={style ? style : {}}
+      className={className ? className : ''}
+      id={id}
+    >
+      {text}
+      {hasSahdow && <Shadow style={{ background: shadowBg }} />}
     </Container>
   );
 };

@@ -2,61 +2,48 @@ import React from 'react';
 import styled from 'styled-components';
 
 import ShadowButton from '../buttons/ShadowButton';
+import {
+  ButtonContainer,
+  NewsLetter as BgNewsLetter,
+  SubscriberContainerWrapper,
+} from './BgImgSubscriber';
 
 const SubscriberContainer = styled.div`
-  position: absolute;
-  background: #ffffff;
   border-radius: 10px;
   padding: 53px 5%;
-  top: -120px;
-  left: calc(11% + 15px);
-  right: calc(11% + 15px);
+  background: white;
+
   @media only screen and (max-width: 992px) {
     padding-top: 30px;
     padding-bottom: 30px;
-    left: calc(2rem + 15px);
-    right: calc(2rem + 15px);
   }
 `;
 
-const NewsLetter = styled.div`
-  h1 {
-    colro: 17171b;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 35px;
-    line-height: 1.25;
-    text-align: center;
-  }
+// const SubscriberContainer = styled.div`
+//   position: absolute;
+//   border-radius: 10px;
+
+//   z-index: 10;
+//   background: white;
+//   width: 100%;
+
+//   top: -120px;
+//   left: 50%;
+//   transform: translateX(-50%);
+
+//   padding: 53px 5%;
+
+//   @media only screen and (max-width: 992px) {
+//     padding-top: 30px;
+//     padding-bottom: 30px;
+//   }
+// `;
+
+const NewsLetter = styled(BgNewsLetter)`
+  h1,
   p {
-    font-family: Rubik;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 1.87;
-    text-align: center;
+    color: #17171b;
   }
-  @media only screen and (min-width: 993px) {
-    h1 {
-      max-width: 444px;
-      text-align: left;
-    }
-    p {
-      max-width: 350px;
-      text-align: left;
-    }
-  }
-  @media only screen and (max-width: 992px) {
-    h1 {
-      font-size: 20px;
-    }
-  }
-`;
-
-const ButtonContainer = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
 `;
 
 const Subscriber = ({
@@ -66,25 +53,24 @@ const Subscriber = ({
   onClick = () => {},
 }) => {
   return (
-    <SubscriberContainer className='row'>
-      <NewsLetter className='col-lg-6'>
-        <h1>{title}</h1>
-        <p>{text}</p>
-      </NewsLetter>
-      <ButtonContainer className='col-lg-6 justify-content-lg-end justify-content-center'>
-        <ShadowButton
-          style={{
-            marginTop: '30px',
-            width: '250px',
-            lineHeight: '60px',
-            height: '60px',
-            background: '#4c6fff',
-          }}
-          text={BtnText}
-          onClick={onClick}
-        />
-      </ButtonContainer>
-    </SubscriberContainer>
+    <SubscriberContainerWrapper>
+      <SubscriberContainer className='row'>
+        <NewsLetter className='col-lg-6'>
+          <h1>{title}</h1>
+          <p>{text}</p>
+        </NewsLetter>
+        <ButtonContainer className='col-lg-6 justify-content-lg-end justify-content-center'>
+          <ShadowButton
+            style={{
+              color: 'white',
+              backgroundColor: '#4C6FFF',
+            }}
+            text={BtnText}
+            onClick={onClick}
+          />
+        </ButtonContainer>
+      </SubscriberContainer>
+    </SubscriberContainerWrapper>
   );
 };
 

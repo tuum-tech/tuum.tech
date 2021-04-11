@@ -2,15 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import accountimg from '../../../assets/img/profile/account.png';
-import IDimg from '../../../assets/img/profile/ID.png';
-import dataimg from '../../../assets/img/profile/data.png';
-import blockchainimg from '../../../assets/img/profile/blockchain.png';
+import accountimg from '../../../assets/img/profile-account.png';
+import IDimg from '../../../assets/img/profile-ID.png';
+import dataimg from '../../../assets/img/profile-data.png';
+import blockchainimg from '../../../assets/img/profile-blockchain.png';
 
 const Container = styled.div`
-  padding: 283px 11% 63px;
   width: 100%;
-  background-color: #e5e5e5;
+  padding-top: 230px;
 
   @media only screen and (max-width: 768px) {
     padding: 63px 2rem;

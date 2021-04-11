@@ -3,15 +3,16 @@ import styled from 'styled-components';
 import { useHistory } from 'react-router-dom';
 
 import ShadowButton from '../../../components/buttons/ShadowButton';
-import solutionimg from '../../../assets/img/identity.png';
+import { HeaderTitle, ContentText } from '../../../components/Texts';
 
 const RowContainer = styled.div`
   width: 100%;
-  padding: 44px 11% 350px;
   background: white;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 50px;
 
   @media only screen and (max-width: 576px) {
     display: block;
@@ -19,9 +20,11 @@ const RowContainer = styled.div`
 `;
 
 const Solution = styled.div`
-  width: calc(25% - 18px);
+  width: calc(25% - 9px);
+  position: relative;
+  margin-top: 20px;
 
-  padding: 100px 40px 40px;
+  padding: 100px 9px 40px;
   border: 1px solid #dedede;
   box-sizing: border-box;
   border-radius: 10px;
@@ -40,33 +43,48 @@ const Solution = styled.div`
     height: 81px;
   }
 
-  .title {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 30px;
+  button {
+    width: 186px;
+    height: 36px;
+    lineheight: 36px;
+    background: white;
+    cursor: pointer;
+    color: white;
 
-    text-align: center;
-    color: #17171b;
-    margin-top: 20px;
-    margin-bottom: 0px;
+    position: absolute;
+    bottom: 40px;
   }
 
-  .txt {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 25px;
-    text-align: center;
-    color: #4a5568;
-    margin-top: 30px;
-    margin-bottom: 20px;
+  @media only screen and (max-width: 992px) {
+    width: calc(50% - 9px);
   }
 
   @media only screen and (max-width: 576px) {
     width: 100%;
-    margin: 22px auto;
   }
+`;
+
+const Title = styled(HeaderTitle)`
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+
+  text-align: center;
+  color: #17171b;
+  margin-top: 20px;
+  margin-bottom: 0px;
+`;
+
+const Text = styled(ContentText)`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: center;
+  color: #4a5568;
+  margin-top: 30px;
+  margin-bottom: 60px;
 `;
 
 const Solutions = () => {
@@ -82,12 +100,11 @@ const Solutions = () => {
   return (
     <RowContainer>
       <Solution>
-        <img src={solutionimg} alt='img' />
-        <p className='title'>Digital Identity</p>
-        <p className='txt'>
+        <Title>Digital Identity</Title>
+        <Text>
           In this digital world we all need a digital identity that we own.
           Quickly, and easily, create a self-sovereign DID.
-        </p>
+        </Text>
         <ShadowButton
           style={btnStyle}
           text='Learn More'
@@ -97,12 +114,11 @@ const Solutions = () => {
         />
       </Solution>
       <Solution>
-        <img src={solutionimg} alt='img' />
-        <p className='title'>Verifiable Credentials</p>
-        <p className='txt'>
+        <Title>Verifiable Credentials</Title>
+        <Text>
           In this digital world we all need a digital identity that we own.
           Quickly, and easily, create a self-sovereign DID.
-        </p>
+        </Text>
         <ShadowButton
           style={btnStyle}
           text='Learn More'
@@ -112,12 +128,11 @@ const Solutions = () => {
         />
       </Solution>
       <Solution>
-        <img src={solutionimg} alt='img' />
-        <p className='title'>Personal Data Storage</p>
-        <p className='txt'>
+        <Title>Personal Data Storage</Title>
+        <Text>
           In this digital world we all need a digital identity that we own.
           Quickly, and easily, create a self-sovereign DID.
-        </p>
+        </Text>
         <ShadowButton
           style={btnStyle}
           text='Learn More'
@@ -127,22 +142,16 @@ const Solutions = () => {
         />
       </Solution>
       <Solution>
-        <img src={solutionimg} alt='img' />
-        <p className='title'>Peer-to-Peer Network</p>
-        <p className='txt'>
+        <Title>Peer-to-Peer Network</Title>
+        <Text className='txt'>
           In this digital world we all need a digital identity that we own.
           Quickly, and easily, create a self-sovereign DID.
-        </p>
+        </Text>
         <ShadowButton
-          style={{
-            width: '186px',
-            height: '36px',
-            lineHeight: '36px',
-            background: 'white',
-            cursor: 'pointer',
-            color: '#AFB3D1',
-          }}
           text='Coming soon'
+          style={{
+            color: '#afb3d1',
+          }}
         />
       </Solution>
     </RowContainer>

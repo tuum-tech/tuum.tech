@@ -10,15 +10,8 @@ const Member = styled.div`
   text-align: center;
 
   img {
-    width: 160px;
-    height: 160px;
-  }
-
-  .emptyArea {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    background-color: white;
+    width: 125px;
+    height: 125px;
   }
 
   .name {
@@ -46,10 +39,10 @@ const OurTeam = () => {
       <Section
         title='Team'
         contentText='Our mission is to guide users through a digital transformation from data silos to freedom with responsibility.'
-        maxWidth='600px'
+        maxWidth='700px'
         padding='138px 0 0'
       />
-      <Section maxWidth='700px' padding='0 0 138px'>
+      <Section maxWidth='804px' padding='0 0 138px'>
         <div className='row'>
           {teamData &&
             teamData.length > 0 &&
@@ -58,11 +51,7 @@ const OurTeam = () => {
                 key={member.name + member.role}
                 className='col-lg-3 col-md-4 col-sm-4 col-xs-6'
               >
-                {member.avatar ? (
-                  <img src={member.avatar} alt='avatar' />
-                ) : (
-                  <div className='emptyArea' />
-                )}
+                <img src={member.avatar} alt='avatar' />
 
                 <p className='name'>{member.name}</p>
                 <p className='role'>{member.role}</p>

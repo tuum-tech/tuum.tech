@@ -3,22 +3,17 @@ import styled from 'styled-components';
 
 import ShadowButton from '../buttons/ShadowButton';
 
-const SubscriberContainerWrapper = styled.div`
+export const SubscriberContainerWrapper = styled.div`
   position: absolute;
   border-radius: 10px;
+  padding: 0 15px;
+  z-index: 10;
+  width: calc(100% - 4rem);
+  max-width: calc(1240px - 4rem);
 
   top: -120px;
-  left: calc(11% + 15px);
-  right: calc(11% + 15px);
-
-  @media only screen and (max-width: 992px) {
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-    top: -180px;
-    left: calc(2rem + 15px);
-    right: calc(2rem + 15px);
-  }
+  left: 50%;
+  transform: translateX(-50%);
 `;
 
 const SubscriberContainer = styled.div`
@@ -28,9 +23,14 @@ const SubscriberContainer = styled.div`
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: cover !important;
+
+  @media only screen and (max-width: 992px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 `;
 
-const NewsLetter = styled.div`
+export const NewsLetter = styled.div`
   color: white;
   font-style: normal;
   font-weight: normal;
@@ -68,10 +68,30 @@ const NewsLetter = styled.div`
   }
 `;
 
-const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div`
   position: relative;
   display: flex;
   align-items: center;
+
+  button {
+    width: 250px;
+    line-height: 60px;
+    height: 60px;
+    background: white;
+    color: #4c6fff;
+    font-size: 16px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    button {
+      margin-top: 20px;
+      line-height: 45px;
+      height: 45px;
+      background: white;
+      color: #4c6fff;
+      font-size: 16px;
+    }
+  }
 `;
 
 const Subscriber = ({
@@ -94,19 +114,7 @@ const Subscriber = ({
           <p>{text}</p>
         </NewsLetter>
         <ButtonContainer className='col-lg-6 justify-content-lg-end justify-content-center'>
-          <ShadowButton
-            style={{
-              marginTop: '30px',
-              width: '250px',
-              lineHeight: '60px',
-              height: '60px',
-              background: 'white',
-              color: '#4C6FFF',
-              fontSize: '16px',
-            }}
-            text={BtnText}
-            onClick={onClick}
-          />
+          <ShadowButton text={BtnText} onClick={onClick} />
         </ButtonContainer>
       </SubscriberContainer>
     </SubscriberContainerWrapper>
