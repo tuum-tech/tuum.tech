@@ -23,6 +23,7 @@ const Solution = styled.div`
   width: calc(25% - 9px);
   position: relative;
   margin-top: 20px;
+  margin-bottom: 50px;
 
   padding: 100px 9px 40px;
   border: 1px solid #dedede;

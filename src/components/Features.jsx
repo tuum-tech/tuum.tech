@@ -5,7 +5,6 @@ import { SectionTitle } from './Texts';
 import { ContentContainer } from './layout';
 
 const Container = styled.div`
-  // background: #e5e5e5;
   padding: 80px 0px;
 `;
 
@@ -64,9 +63,13 @@ const Section = styled.div`
   }
 `;
 
-const Explain = ({ features }) => {
+const Features = ({ features, bgColor = 'white', children }) => {
   return (
-    <Container>
+    <Container
+      style={{
+        background: bgColor,
+      }}
+    >
       <ContentContainer>
         <Title>Features at a Glance</Title>
         <FeatureRow>
@@ -79,8 +82,9 @@ const Explain = ({ features }) => {
           ))}
         </FeatureRow>
       </ContentContainer>
+      {children && children}
     </Container>
   );
 };
 
-export default Explain;
+export default Features;

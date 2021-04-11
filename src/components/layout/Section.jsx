@@ -3,18 +3,18 @@ import React from 'react';
 import styled from 'styled-components';
 import { SectionText, SectionTitle } from '../Texts';
 
-const SectionImgContainer = styled.div`
+export const SectionImgContainer = styled.div`
   width: 100%;
   height: 100%;
 `;
 
-const SectionBgColorcontainer = styled.div`
+export const SectionBgColorcontainer = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
 `;
 
-const SectionContent = styled.div`
+export const SectionContent = styled.div`
   width: 100%;
   margin: 0 auto;
 `;
@@ -37,8 +37,8 @@ const Section = ({
           {contentText && (
             <SectionText style={txtStyle}>{contentText}</SectionText>
           )}
-          {children && children}
         </SectionContent>
+        {children && children}
       </SectionBgColorcontainer>
     </SectionImgContainer>
   );

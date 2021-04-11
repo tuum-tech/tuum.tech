@@ -6,8 +6,7 @@ import heroimg from '../../../assets/img/backgrounds/profile-hero.png';
 import { HeaderTitle, ContentText } from '../../../components/Texts';
 
 const HeroContainer = styled.div`
-  min-height: 880px;
-
+  min-height: 800px;
   position: relative;
   padding: 78px 2rem 107px;
   width: 100%;
@@ -16,7 +15,7 @@ const HeroContainer = styled.div`
 
   img {
     position: absolute;
-    right: 9%;
+    right: 0;
     top: -30px;
     max-width: 600px;
     width: 50%;

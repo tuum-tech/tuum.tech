@@ -67,9 +67,9 @@ const VerifiedCredential = () => {
               </div>
             </div>
           </SplitWrap>
-
-          <Features features={features} />
-
+        </ContentContainer>
+        <Features bgColor='#E5E5E5' features={features} />
+        <ContentContainer>
           <SplitWrap>
             <div className='features-split-inner section-inner'>
               <div className='split-wrap'>
@@ -82,15 +82,10 @@ const VerifiedCredential = () => {
               </div>
             </div>
           </SplitWrap>
-
-          {/* <Explain /> */}
-          {/* <Features /> */}
         </ContentContainer>
       </main>
-      <FooterContainer style={{ marginTop: 150 }}>
-        <BgImgSubscriber bgImg={subscriberbgImg} />
-        <Footer />
-      </FooterContainer>
+      <BgImgSubscriber bgImg={subscriberbgImg} />
+      <Footer />
     </>
   );
 };

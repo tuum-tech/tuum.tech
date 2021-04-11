@@ -7,9 +7,19 @@ import IDimg from '../../../assets/img/profile-ID.png';
 import dataimg from '../../../assets/img/profile-data.png';
 import blockchainimg from '../../../assets/img/profile-blockchain.png';
 
-const Container = styled.div`
+const ContainerWrapper = styled.div`
   width: 100%;
   padding-top: 230px;
+  background-color: #e5e5e5;
+`;
+
+const Container = styled.div`
+  padding: 0px 2rem;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
 
   @media only screen and (max-width: 768px) {
     padding: 63px 2rem;
@@ -117,19 +127,21 @@ const Technologies = () => {
     },
   ];
   return (
-    <Container>
-      <Title>Embedded Technologies</Title>
-      <Row>
-        {techData.map((item) => (
-          <Section>
-            <img src={item.img} alt='feature' />
-            <p className='title'>{item.title}</p>
-            <p className='text'>{item.text}</p>
-            <LearnMore to={item.link}>Learn More</LearnMore>
-          </Section>
-        ))}
-      </Row>
-    </Container>
+    <ContainerWrapper>
+      <Container>
+        <Title>Embedded Technologies</Title>
+        <Row>
+          {techData.map((item) => (
+            <Section>
+              <img src={item.img} alt='feature' />
+              <p className='title'>{item.title}</p>
+              <p className='text'>{item.text}</p>
+              <LearnMore to={item.link}>Learn More</LearnMore>
+            </Section>
+          ))}
+        </Row>
+      </Container>
+    </ContainerWrapper>
   );
 };
 

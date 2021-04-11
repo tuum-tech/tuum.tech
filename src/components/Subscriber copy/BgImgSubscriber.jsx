@@ -3,12 +3,6 @@ import styled from 'styled-components';
 
 import ShadowButton from '../buttons/ShadowButton';
 
-const Container = styled.div`
-  position: relative;
-  height: 200px;
-  padding-top: 100px;
-`;
-
 export const SubscriberContainerWrapper = styled.div`
   position: absolute;
   border-radius: 10px;
@@ -17,6 +11,7 @@ export const SubscriberContainerWrapper = styled.div`
   width: calc(100% - 4rem);
   max-width: calc(1240px - 4rem);
 
+  top: -120px;
   left: 50%;
   transform: translateX(-50%);
 `;
@@ -105,31 +100,24 @@ const Subscriber = ({
   BtnText = 'Subscribe Now',
   onClick = () => {},
   bgImg,
-  bgColor = 'white',
 }) => {
   return (
-    <Container
-      style={{
-        background: bgColor,
-      }}
-    >
-      <SubscriberContainerWrapper>
-        <SubscriberContainer
-          className='row'
-          style={{
-            background: `url(${bgImg})`,
-          }}
-        >
-          <NewsLetter className='col-lg-6'>
-            <h1>{title}</h1>
-            <p>{text}</p>
-          </NewsLetter>
-          <ButtonContainer className='col-lg-6 justify-content-lg-end justify-content-center'>
-            <ShadowButton text={BtnText} onClick={onClick} />
-          </ButtonContainer>
-        </SubscriberContainer>
-      </SubscriberContainerWrapper>
-    </Container>
+    <SubscriberContainerWrapper>
+      <SubscriberContainer
+        className='row'
+        style={{
+          background: `url(${bgImg})`,
+        }}
+      >
+        <NewsLetter className='col-lg-6'>
+          <h1>{title}</h1>
+          <p>{text}</p>
+        </NewsLetter>
+        <ButtonContainer className='col-lg-6 justify-content-lg-end justify-content-center'>
+          <ShadowButton text={BtnText} onClick={onClick} />
+        </ButtonContainer>
+      </SubscriberContainer>
+    </SubscriberContainerWrapper>
   );
 };
 

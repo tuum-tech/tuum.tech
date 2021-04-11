@@ -64,6 +64,10 @@ const teamData = [
     role: 'Developer',
     avatar: anony,
   },
+  {
+    name: '',
+    role: '',
+  },
 ];
 
 export default teamData;

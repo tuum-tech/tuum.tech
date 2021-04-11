@@ -62,11 +62,7 @@ const PersonalDataStorage = () => {
   return (
     <>
       <Navbar />
-      <main
-        style={{
-          background: '#e5e5e5',
-        }}
-      >
+      <main>
         <Hero
           shortInfo='Personal Data Storage Solutions'
           bgImg={heroImg}
@@ -75,7 +71,7 @@ const PersonalDataStorage = () => {
           maxWidth='722px'
         />
         <ContentContainer>
-          <SplitWrap className='mt-5'>
+          <SplitWrap className='mt-5 mb-5'>
             <div className='features-split-inner section-inner'>
               <div className='split-wrap'>
                 <SplitItem
@@ -92,17 +88,17 @@ const PersonalDataStorage = () => {
           </SplitWrap>
         </ContentContainer>
 
-        <Features features={features} />
-      </main>
-      <FooterContainer style={{ marginTop: 150 }}>
-        <BgImgSubscriber
-          bgImg={subscriberbgImg}
-          title='Ready to integrate Decentralized Storage into your website?'
-          text='Use the Elastos Decentralized Storage (Hive) JS SDK'
-          BtnText='Get started'
-        />
+        <Features features={features} bgColor='#e5e5e5'>
+          <BgImgSubscriber
+            bgImg={subscriberbgImg}
+            title='Ready to integrate Decentralized Storage into your website?'
+            text='Use the Elastos Decentralized Storage (Hive) JS SDK'
+            BtnText='Get started'
+            bgColor='#E5E5E5'
+          />
+        </Features>
         <Footer />
-      </FooterContainer>
+      </main>
     </>
   );
 };

@@ -61,52 +61,54 @@ const Category = styled.p`
 
 const Footer = () => {
   return (
-    <FooterContent>
-      <div className='row'>
-        <div className='col-lg-5 col-md-4'>
-          <div className='row'>
-            <div className='col-sm-6 col-md-12'>
-              <img src={logo} width={171} className='mb-5' alt='logo' />
+    <FooterContainer>
+      <FooterContent>
+        <div className='row'>
+          <div className='col-lg-5 col-md-4'>
+            <div className='row'>
+              <div className='col-sm-6 col-md-12'>
+                <img src={logo} width={171} className='mb-5' alt='logo' />
+              </div>
+              <div className='col-sm-6 col-md-12'>
+                <LogoText className='mb-5'>
+                  Tuum Technologies is the software engineering leader of the
+                  Open Decentralized Internet space.
+                </LogoText>
+              </div>
             </div>
-            <div className='col-sm-6 col-md-12'>
-              <LogoText className='mb-5'>
-                Tuum Technologies is the software engineering leader of the Open
-                Decentralized Internet space.
-              </LogoText>
+          </div>
+          <div className='col-lg-7 col-md-8'>
+            <div className='row'>
+              <div className='col-lg-3 col-md-3 col-sm-6'>
+                <Category>Solutions</Category>
+                <FooterLink>Digital Identity</FooterLink>
+                <FooterLink>Verifiable Credentials</FooterLink>
+                <FooterLink>Personal Data Storage</FooterLink>
+                <FooterLink className='mb-5'>Peer-to-Peer Network</FooterLink>
+              </div>
+              <div className='col-lg-3 col-md-3 col-sm-6'>
+                <Category>Products</Category>
+                <FooterLink>Profile</FooterLink>
+              </div>
+              <div className='col-lg-3 col-md-3 col-sm-6'>
+                <Category>Developers</Category>
+                <FooterLink>Developer Portal</FooterLink>
+              </div>
+              <div className='col-lg-3 col-md-3 col-sm-6'>
+                <Category>Learn</Category>
+                <FooterLink>Elastos Academy</FooterLink>
+              </div>
             </div>
           </div>
         </div>
-        <div className='col-lg-7 col-md-8'>
-          <div className='row'>
-            <div className='col-lg-3 col-md-3 col-sm-6'>
-              <Category>Solutions</Category>
-              <FooterLink>Digital Identity</FooterLink>
-              <FooterLink>Verifiable Credentials</FooterLink>
-              <FooterLink>Personal Data Storage</FooterLink>
-              <FooterLink className='mb-5'>Peer-to-Peer Network</FooterLink>
-            </div>
-            <div className='col-lg-3 col-md-3 col-sm-6'>
-              <Category>Products</Category>
-              <FooterLink>Profile</FooterLink>
-            </div>
-            <div className='col-lg-3 col-md-3 col-sm-6'>
-              <Category>Developers</Category>
-              <FooterLink>Developer Portal</FooterLink>
-            </div>
-            <div className='col-lg-3 col-md-3 col-sm-6'>
-              <Category>Learn</Category>
-              <FooterLink>Elastos Academy</FooterLink>
-            </div>
-          </div>
-        </div>
-      </div>
-      <FooterLinks>
-        <FooterLink href='/'>©2021 Tuum Technologies</FooterLink>
-        <FooterLink href='/'>Privacy Policy</FooterLink>
-        <FooterLink href='/'>Terms of Service</FooterLink>
-        <FooterLink href='/'>Contact</FooterLink>
-      </FooterLinks>
-    </FooterContent>
+        <FooterLinks>
+          <FooterLink href='/'>©2021 Tuum Technologies</FooterLink>
+          <FooterLink href='/'>Privacy Policy</FooterLink>
+          <FooterLink href='/'>Terms of Service</FooterLink>
+          <FooterLink href='/'>Contact</FooterLink>
+        </FooterLinks>
+      </FooterContent>
+    </FooterContainer>
   );
 };
 

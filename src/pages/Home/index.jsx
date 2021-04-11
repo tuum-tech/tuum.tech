@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { useHistory } from 'react-router-dom';
+import styled from 'styled-components';
 
 import Solutions from './components/Solutions';
 import BgImgSubscriber from '../../components/Subscriber/BgImgSubscriber';
@@ -7,23 +8,30 @@ import BgImgSubscriber from '../../components/Subscriber/BgImgSubscriber';
 import {
   Navbar,
   Footer,
-  FooterContainer,
   Hero,
   Section,
   ContentContainer,
 } from '../../components/layout';
 import { SplitWrap, SplitItem, SplitTitle } from '../../components/SplitComp';
-import {
-  LinkButton,
-  WhiteBoxArea,
-  WhiteBox,
-  CenterScriber,
-} from './components/Elements';
+import { LinkButton, WhiteBoxArea, WhiteBox } from './components/Elements';
 
 import heroImg from '../../assets/img/backgrounds/home-hero.png';
 import subscriberbgImg from '../../assets/img/subscribers-home.png';
 import profileImg from '../../assets/img/explain-profile.png';
 import getdidsImg from '../../assets/img/explain-getdids.png';
+
+const FeaturesContainer = styled.div`
+  background: #e5e5e5;
+
+  .split-wrapp {
+    padding: 0px 2rem;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+  }
+`;
 
 const VerifiedCredentialPage = () => {
   const profileRef = useRef(null);
@@ -34,7 +42,7 @@ const VerifiedCredentialPage = () => {
     <>
       <Navbar />
 
-      <main style={{ paddingBottom: '150px' }}>
+      <main>
         <Hero
           bgImg={heroImg}
           title='The Most Trusted Elastos Blockchain Solutions'
@@ -88,13 +96,11 @@ const VerifiedCredentialPage = () => {
             bgColor='white'
           />
           <Solutions />
-          <CenterScriber>
-            <BgImgSubscriber bgImg={subscriberbgImg} />
-          </CenterScriber>
-
-          {/* <FeaturesContainer> */}
+        </ContentContainer>
+        <BgImgSubscriber bgImg={subscriberbgImg} />
+        <FeaturesContainer>
           <SplitTitle>Featured Products</SplitTitle>
-          <SplitWrap>
+          <SplitWrap className='split-wrapp'>
             <div className='features-split-inner section-inner'>
               <div className='split-wrap'>
                 <div ref={profileRef}>
@@ -123,13 +129,10 @@ const VerifiedCredentialPage = () => {
               </div>
             </div>
           </SplitWrap>
-          {/* </FeaturesContainer> */}
-        </ContentContainer>
+        </FeaturesContainer>
       </main>
-      <FooterContainer>
-        <BgImgSubscriber bgImg={subscriberbgImg} />
-        <Footer />
-      </FooterContainer>
+      <BgImgSubscriber bgColor='#e5e5e5' bgImg={subscriberbgImg} />
+      <Footer />
     </>
   );
 };

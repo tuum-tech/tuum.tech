@@ -67,8 +67,10 @@ const DigitalIdentityPage = () => {
               </div>
             </div>
           </SplitWrap>
-          <Features features={features} />
-          <SplitWrap>
+        </ContentContainer>
+        <Features features={features} bgColor='#E5E5E5' />
+        <ContentContainer>
+          <SplitWrap className='mt-5'>
             <div className='features-split-inner section-inner'>
               <div className='split-wrap'>
                 <SplitItem
@@ -91,10 +93,8 @@ const DigitalIdentityPage = () => {
           </SplitWrap>
         </ContentContainer>
       </main>
-      <FooterContainer style={{ marginTop: 150 }}>
-        <BgImgSubscriber bgImg={subscriberbgImg} />
-        <Footer />
-      </FooterContainer>
+      <BgImgSubscriber bgImg={subscriberbgImg} />
+      <Footer />
     </>
   );
 };

@@ -42,7 +42,13 @@ const OurTeam = () => {
         maxWidth='700px'
         padding='138px 0 0'
       />
-      <Section maxWidth='804px' padding='0 0 138px'>
+      <Section
+        maxWidth='804px'
+        padding='0 0 138px'
+        containerStyle={{
+          marginBottom: '200px',
+        }}
+      >
         <div className='row'>
           {teamData &&
             teamData.length > 0 &&
@@ -51,8 +57,7 @@ const OurTeam = () => {
                 key={member.name + member.role}
                 className='col-lg-3 col-md-4 col-sm-4 col-xs-6'
               >
-                <img src={member.avatar} alt='avatar' />
-
+                {member.avatar && <img src={member.avatar} alt='avatar' />}
                 <p className='name'>{member.name}</p>
                 <p className='role'>{member.role}</p>
               </Member>

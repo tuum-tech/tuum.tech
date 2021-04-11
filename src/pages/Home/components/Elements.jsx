@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { SectionTitle } from '../../../components/Texts';
 
 export const LinkButton = styled.button`
   outline: none;
@@ -12,16 +11,6 @@ export const LinkButton = styled.button`
 
   color: #4c6fff;
 `;
-
-// export const FeaturesContainer = styled.div`
-//   position: relative;
-//   width: 100%;
-
-//   width: 100%;
-//   max-width: 1240px;
-//   margin: 0 auto;
-//   display: block;
-// `;
 
 export const WhiteBoxArea = styled.div`
   display: flex;
@@ -101,18 +90,5 @@ export const WhiteBox = styled.div`
   @media only screen and (max-width: 768px) {
     width: 100%;
     margin-bottom: 63px;
-  }
-`;
-
-export const CenterScriber = styled.div`
-  position: relative;
-  margin-top: 250px;
-
-  & > div:first-child {
-    left: 0 !important;
-    right: 0 !important;
-    max-width: 100% !important;
-    width: 100% !important;
-    transform: none !important;
   }
 `;

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import OurTeam from './components/OurTeam';
 import {
-  FooterContainer,
   Footer,
   Hero,
   Section,
@@ -25,6 +24,7 @@ const IntroText = styled.div`
     background: #ffffff;
     border-radius: 14px;
     padding: 64px 8%;
+    box-shadow: 0px 3px 8px -1px rgba(50, 50, 71, 0.05);
 
     left: 11%;
     right: 11%;
@@ -58,7 +58,11 @@ const AboutPage = () => {
   return (
     <>
       <Navbar />
-      <main>
+      <main
+        style={{
+          background: '#E5E5E5',
+        }}
+      >
         <Hero
           bgImg={heroImg}
           shortInfo='About Tuum'
@@ -89,7 +93,7 @@ const AboutPage = () => {
           containerStyle={{
             background: `url(${SectionBgImg})`,
           }}
-          padding='138px 0 238px'
+          padding='138px 0 0px'
           bgColor='rgb(76, 111, 255, .8)'
           maxWidth='960px'
           txtColor='white'
@@ -99,12 +103,12 @@ const AboutPage = () => {
             lineHeight: '40px',
           }}
           contentText='Tuum is defined by its Latin origin “yours” - our emphasis is your technology, your data, your Internet. We respect the entrepreneurial drive and team building process; we’re here to stimulate through education, discovery, and development opportunities.'
-        />
-      </main>
-      <FooterContainer>
-        <WhiteBgSubscriber />
+        >
+          <WhiteBgSubscriber />
+        </Section>
+
         <Footer />
-      </FooterContainer>
+      </main>
     </>
   );
 };
