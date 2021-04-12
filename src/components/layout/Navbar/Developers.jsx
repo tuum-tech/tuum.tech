@@ -9,9 +9,9 @@ const Developers = () => {
         <span className="nav-link-inner--text">Developers</span>
       </Link>
       <div className="dropdown-menu">
-        <a href="/" className="dropdown-item">
+        {/* <a href="/" className="dropdown-item">
           Tuum Developer Portal
-        </a>
+        </a> */}
         <a href="https://developer.elastos.org/" className="dropdown-item">
           Elastos Developer Portal
         </a>

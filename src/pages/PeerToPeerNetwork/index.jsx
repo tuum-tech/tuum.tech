@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import { Navbar, Footer, Hero } from '../../components/layout';
-import Features from './components/Features';
-import ExplorerMore from './components/ExplorerMore';
-import heroImg from '../../assets/img/backgrounds/peertopeernetwork-hero.png';
+import { Navbar, Footer, Hero } from "../../components/layout";
+import Features from "./components/Features";
+import ExplorerMore from "./components/ExplorerMore";
+import heroImg from "../../assets/img/backgrounds/peertopeernetwork-hero.png";
 
 const DisplayText = styled.div`
   text-align: center;
@@ -31,23 +31,24 @@ const PeerToPeerNetwork = () => {
       <Navbar />
       <main>
         <Hero
-          shortInfo='Solutions'
+          shortInfo="Solutions"
           bgImg={heroImg}
-          title='Peer-to-Peer Network'
+          title="Peer-to-Peer Network"
           intro={
-            'Tuum Technologies is the software engineering leader of the Open Decentralized Internet space. Our suite of Elastos powered products and services help developers build decentralized applications and enable individuals to control data on an open web.'
+            "Tuum Technologies is the software engineering leader of the Open Decentralized Internet space. Our suite of Elastos powered products and services help developers build decentralized applications and enable individuals to control data on an open web."
           }
         />
         <DisplayText>
-          Tuum Technologies is the world’s leading provider of Elastos powered
-          solutions, using education and opportunity to advance projects
-          building a decentralized Internet. We back bold entrepreneurs and
-          developers building a decentralized future from learning through all
-          phases of growth. We connect entrepreneurs, developers, academics,
-          industry experts, and others in the technology ecosystem. Through the
-          Tuum network we provide teams with access to expertise and insights
-          that enhance the Elastos development experience while providing a
-          decentralized Internet for all.
+          Tuum Technologies is the world’s leading Elastos software company. We
+          enable a global network of entrepreneurs, developers, academics,
+          industry experts, and users to access the decentralized internet.
+          Through our network we provide teams the resources necessary to build
+          revolutionary applications and launch decentralized platforms. Elastos
+          is the largest Web3 provider of open source solutions, employing not
+          only blockchain technology, but a peer-to-peer network for
+          communication, decentralized data storage services, and a
+          decentralized ID system. With Elastos, we are revolutionizing the
+          internet.
         </DisplayText>
         <Features />
         <ExplorerMore />
