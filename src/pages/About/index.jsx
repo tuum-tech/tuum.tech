@@ -60,7 +60,7 @@ const AboutPage = () => {
       <Navbar />
       <main
         style={{
-          background: '#E5E5E5',
+          background: '#FAFAFA',
         }}
       >
         <Hero

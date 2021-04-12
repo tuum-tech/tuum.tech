@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 import ShadowButton from '../buttons/ShadowButton';
 import {
-  ButtonContainer,
   NewsLetter as BgNewsLetter,
   SubscriberContainerWrapper,
 } from './BgImgSubscriber';
+import Form, { ButtonContainer } from './Form';
 
 const Container = styled.div`
   position: relative;
@@ -46,16 +46,13 @@ const Subscriber = ({
             <h1>{title}</h1>
             <p>{text}</p>
           </NewsLetter>
-          <ButtonContainer className='col-lg-6 justify-content-lg-end justify-content-center'>
-            <ShadowButton
-              style={{
-                color: 'white',
-                backgroundColor: '#4C6FFF',
-              }}
-              text={BtnText}
-              onClick={onClick}
-            />
-          </ButtonContainer>
+          {BtnText === 'Subscribe Now' ? (
+            <Form hasBgImg={false} />
+          ) : (
+            <ButtonContainer className='col-lg-6 justify-content-lg-end justify-content-center'>
+              <ShadowButton text={BtnText} onClick={onClick} />
+            </ButtonContainer>
+          )}
         </SubscriberContainer>
       </SubscriberContainerWrapper>
     </Container>
