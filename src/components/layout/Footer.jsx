@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
-import logo from '../../assets/img/brand-whitelogo.png';
+import logo from "../../assets/img/brand-whitelogo.png";
 
 export const FooterContainer = styled.div`
   padding: 80px 2rem 0px;
@@ -63,49 +63,59 @@ const Footer = () => {
   return (
     <FooterContainer>
       <FooterContent>
-        <div className='row'>
-          <div className='col-lg-5 col-md-4'>
-            <div className='row'>
-              <div className='col-sm-6 col-md-12'>
-                <img src={logo} width={171} className='mb-5' alt='logo' />
+        <div className="row">
+          <div className="col-lg-5 col-md-4">
+            <div className="row">
+              <div className="col-sm-6 col-md-12">
+                <img src={logo} width={171} className="mb-5" alt="logo" />
               </div>
-              <div className='col-sm-6 col-md-12'>
-                <LogoText className='mb-5'>
+              <div className="col-sm-6 col-md-12">
+                <LogoText className="mb-5">
                   Tuum Technologies is the software engineering leader of the
                   Open Decentralized Internet space.
                 </LogoText>
               </div>
             </div>
           </div>
-          <div className='col-lg-7 col-md-8'>
-            <div className='row'>
-              <div className='col-lg-3 col-md-3 col-sm-6'>
+          <div className="col-lg-7 col-md-8">
+            <div className="row">
+              <div className="col-lg-3 col-md-3 col-sm-6">
                 <Category>Solutions</Category>
-                <FooterLink>Digital Identity</FooterLink>
-                <FooterLink>Verifiable Credentials</FooterLink>
-                <FooterLink>Personal Data Storage</FooterLink>
-                <FooterLink className='mb-5'>Peer-to-Peer Network</FooterLink>
+                <FooterLink href="/solutions/digitalidentity">
+                  Digital Identity
+                </FooterLink>
+                <FooterLink href="/solutions/verifiedcredential">
+                  Verifiable Credentials
+                </FooterLink>
+                <FooterLink href="/solutions/personaldatastorage">
+                  Personal Data Storage
+                </FooterLink>
+                <FooterLink className="mb-5">Peer-to-Peer Network</FooterLink>
               </div>
-              <div className='col-lg-3 col-md-3 col-sm-6'>
+              <div className="col-lg-3 col-md-3 col-sm-6">
                 <Category>Products</Category>
-                <FooterLink>Profile</FooterLink>
+                <FooterLink href="/products/profile">Profile</FooterLink>
               </div>
-              <div className='col-lg-3 col-md-3 col-sm-6'>
+              <div className="col-lg-3 col-md-3 col-sm-6">
                 <Category>Developers</Category>
-                <FooterLink>Developer Portal</FooterLink>
+                <FooterLink href="https://developer.elastos.org/">
+                  Developer Portal
+                </FooterLink>
               </div>
-              <div className='col-lg-3 col-md-3 col-sm-6'>
+              <div className="col-lg-3 col-md-3 col-sm-6">
                 <Category>Learn</Category>
-                <FooterLink>Elastos Academy</FooterLink>
+                <FooterLink href="https://elastos.academy/">
+                  Elastos Academy
+                </FooterLink>
               </div>
             </div>
           </div>
         </div>
         <FooterLinks>
-          <FooterLink href='/'>©2021 Tuum Technologies</FooterLink>
-          <FooterLink href='/'>Privacy Policy</FooterLink>
-          <FooterLink href='/'>Terms of Service</FooterLink>
-          <FooterLink href='/'>Contact</FooterLink>
+          <FooterLink href="/">©2021 Tuum Technologies</FooterLink>
+          <FooterLink href="/">Privacy Policy</FooterLink>
+          <FooterLink href="/">Terms of Service</FooterLink>
+          <FooterLink href="/">Contact</FooterLink>
         </FooterLinks>
       </FooterContent>
     </FooterContainer>
