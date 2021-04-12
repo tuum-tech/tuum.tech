@@ -114,7 +114,7 @@ const VerifiedCredentialPage = () => {
                     imgSrc={getdidsImg}
                     introOne="Decentralized Identity"
                     title="getDIDs.com"
-                    description="Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet."
+                    description="At getdids.com, we keep it very simple. Log in, save your security words, and publish a new digital identity to the blockchain – that’s it! Now you have your very own unique proof of ownership and can begin owning your data."
                     onClick={() =>
                       (window.location.href = "https://www.getdids.com/")
                     }
@@ -127,7 +127,7 @@ const VerifiedCredentialPage = () => {
                     imgSrc={profileexplainImg}
                     introOne="Identity Platform"
                     title="Profile"
-                    description="Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet."
+                    description="Having multiple profiles online is messy. Your personal information is copied and stored on every application and website. Profile gives you total control of your digital world, in one place. Finally unlock the power of your content online."
                     onClick={() => history.push("/products/profile")}
                     btnText="Learn More"
                   />

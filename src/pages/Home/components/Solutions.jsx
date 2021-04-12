@@ -1,14 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useHistory } from 'react-router-dom';
+import React from "react";
+import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
-import ShadowButton from '../../../components/buttons/ShadowButton';
-import { HeaderTitle, ContentText } from '../../../components/Texts';
+import ShadowButton from "../../../components/buttons/ShadowButton";
+import { HeaderTitle, ContentText } from "../../../components/Texts";
 
-import peertopeernetworkImg from '../../../assets/img/solutions/peer-to-peer-network.png';
-import digitalidentityImg from '../../../assets/img/solutions/digital-identity.png';
-import personaldatastorageImg from '../../../assets/img/solutions/personal-datastorage.png';
-import verifiablecredentialImg from '../../../assets/img/solutions/verifiable-credentials.png';
+import peertopeernetworkImg from "../../../assets/img/solutions/peer-to-peer-network.png";
+import digitalidentityImg from "../../../assets/img/solutions/digital-identity.png";
+import personaldatastorageImg from "../../../assets/img/solutions/personal-datastorage.png";
+import verifiablecredentialImg from "../../../assets/img/solutions/verifiable-credentials.png";
 
 const RowContainer = styled.div`
   width: 100%;
@@ -108,11 +108,11 @@ const Solutions = () => {
   const history = useHistory();
 
   const btnStyle = {
-    width: '186px',
-    height: '36px',
-    lineHeight: '36px',
-    background: '#4c6fff',
-    cursor: 'pointer',
+    width: "186px",
+    height: "36px",
+    lineHeight: "36px",
+    background: "#4c6fff",
+    cursor: "pointer",
   };
   return (
     <RowContainer>
@@ -130,9 +130,9 @@ const Solutions = () => {
           </Text>
           <ShadowButton
             style={btnStyle}
-            text='Learn More'
+            text="Learn More"
             onClick={() => {
-              history.push('/solutions/digitalidentity');
+              history.push("/solutions/digitalidentity");
             }}
           />
         </SolutionContent>
@@ -146,14 +146,14 @@ const Solutions = () => {
         <SolutionContent>
           <Title>Verifiable Credentials</Title>
           <Text>
-            In this digital world we all need a digital identity that we own.
-            Quickly, and easily, create a self-sovereign DID.
+            Authorize access to data based on verified attributes. Verify once,
+            use everywhere online.
           </Text>
           <ShadowButton
             style={btnStyle}
-            text='Learn More'
+            text="Learn More"
             onClick={() => {
-              history.push('/solutions/verifiedcredential');
+              history.push("/solutions/verifiedcredential");
             }}
           />
         </SolutionContent>
@@ -167,14 +167,14 @@ const Solutions = () => {
         <SolutionContent>
           <Title>Personal Data Storage</Title>
           <Text>
-            In this digital world we all need a digital identity that we own.
-            Quickly, and easily, create a self-sovereign DID.
+            Give users the power to own their data by providing decentralized
+            storage services on your platform.
           </Text>
           <ShadowButton
             style={btnStyle}
-            text='Learn More'
+            text="Learn More"
             onClick={() => {
-              history.push('/solutions/personaldatastorage');
+              history.push("/solutions/personaldatastorage");
             }}
           />
         </SolutionContent>
@@ -187,14 +187,14 @@ const Solutions = () => {
         />
         <SolutionContent>
           <Title>Peer-to-Peer Network</Title>
-          <Text className='txt'>
-            In this digital world we all need a digital identity that we own.
-            Quickly, and easily, create a self-sovereign DID.
+          <Text className="txt">
+            Fully decentralized and serverless, all communication runs through
+            Elastos Peer-to-Peer Network(Carrier).
           </Text>
           <ShadowButton
-            text='Coming soon'
+            text="Coming soon"
             style={{
-              color: '#afb3d1',
+              color: "#afb3d1",
             }}
           />
         </SolutionContent>
