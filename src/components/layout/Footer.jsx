@@ -90,7 +90,7 @@ const Footer = () => {
                 <FooterLink href="/solutions/personaldatastorage">
                   Personal Data Storage
                 </FooterLink>
-                <FooterLink className="mb-5">Peer-to-Peer Network</FooterLink>
+                {/* <FooterLink className="mb-5">Peer-to-Peer Network</FooterLink> */}
               </div>
               <div className="col-lg-3 col-md-3 col-sm-6">
                 <Category>Products</Category>
