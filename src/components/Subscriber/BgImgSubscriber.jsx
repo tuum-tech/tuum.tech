@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import ShadowButton from '../buttons/ShadowButton';
+import Form from './Form';
 
 const Container = styled.div`
   position: relative;
@@ -35,10 +36,37 @@ const SubscriberContainer = styled.div`
   }
 `;
 
+const ButtonContainer = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  button {
+    width: 250px;
+    line-height: 60px;
+    height: 60px;
+    background: white;
+    color: #4c6fff;
+    font-size: 16px;
+  }
+  @media only screen and (max-width: 992px) {
+    button {
+      margin-top: 20px;
+      line-height: 45px;
+      height: 45px;
+      background: white;
+      color: #4c6fff;
+      font-size: 16px;
+    }
+  }
+`;
+
 export const NewsLetter = styled.div`
   color: white;
   font-style: normal;
   font-weight: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   h1 {
     color: white;
@@ -56,46 +84,13 @@ export const NewsLetter = styled.div`
   }
 
   @media only screen and (min-width: 993px) {
-    h1 {
-      max-width: 544px;
-      text-align: left;
-    }
+    h1,
     p {
-      max-width: 400px;
       text-align: left;
     }
   }
 
   @media only screen and (max-width: 992px) {
-    h1 {
-      font-size: 20px;
-    }
-  }
-`;
-
-export const ButtonContainer = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-
-  button {
-    width: 250px;
-    line-height: 60px;
-    height: 60px;
-    background: white;
-    color: #4c6fff;
-    font-size: 16px;
-  }
-
-  @media only screen and (max-width: 992px) {
-    button {
-      margin-top: 20px;
-      line-height: 45px;
-      height: 45px;
-      background: white;
-      color: #4c6fff;
-      font-size: 16px;
-    }
   }
 `;
 
@@ -124,9 +119,13 @@ const Subscriber = ({
             <h1>{title}</h1>
             <p>{text}</p>
           </NewsLetter>
-          <ButtonContainer className='col-lg-6 justify-content-lg-end justify-content-center'>
-            <ShadowButton text={BtnText} onClick={onClick} />
-          </ButtonContainer>
+          {BtnText === 'Subscribe Now' ? (
+            <Form />
+          ) : (
+            <ButtonContainer className='col-lg-6 justify-content-lg-end justify-content-center'>
+              <ShadowButton text={BtnText} onClick={onClick} />
+            </ButtonContainer>
+          )}
         </SubscriberContainer>
       </SubscriberContainerWrapper>
     </Container>

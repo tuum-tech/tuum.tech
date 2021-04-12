@@ -37,7 +37,7 @@ export const WhiteBox = styled.div`
   background: #ffffff;
   border-radius: 14px;
   min-height: 217px;
-  padding: 93px 27px 70px;
+  padding: 30px 27px 30px;
   position: relative;
 
   box-shadow: 0px 20px 50px 10px rgba(193, 203, 244, 0.2);
@@ -46,6 +46,12 @@ export const WhiteBox = styled.div`
   font-family: 'SF Pro Display';
   font-style: normal;
   text-align: center;
+
+  img {
+    width: auto;
+    height: 70px;
+    margin-bottom: 17px;
+  }
 
   .title {
     font-style: normal;

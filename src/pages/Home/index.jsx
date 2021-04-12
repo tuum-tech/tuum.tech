@@ -17,11 +17,14 @@ import { LinkButton, WhiteBoxArea, WhiteBox } from './components/Elements';
 
 import heroImg from '../../assets/img/backgrounds/home-hero.png';
 import subscriberbgImg from '../../assets/img/subscribers-home.png';
-import profileImg from '../../assets/img/explain-profile.png';
+import profileexplainImg from '../../assets/img/explain-profile.png';
 import getdidsImg from '../../assets/img/explain-getdids.png';
+import profileIcon from '../../assets/img/nav-Profile.png';
+import didIcon from '../../assets/img/nav-ID.png';
+import aboutIcon from '../../assets/img/vector.png';
 
 const FeaturesContainer = styled.div`
-  background: #e5e5e5;
+  background: #fafafa;
 
   .split-wrapp {
     padding: 0px 2rem;
@@ -52,6 +55,7 @@ const VerifiedCredentialPage = () => {
         <ContentContainer>
           <WhiteBoxArea>
             <WhiteBox>
+              <img src={profileIcon} alt='profile' />
               <p className='title'>Profile</p>
               <p className='description'>
                 Profile is a new type of digital identity owned by you - where
@@ -63,6 +67,7 @@ const VerifiedCredentialPage = () => {
               </LinkButton>
             </WhiteBox>
             <WhiteBox>
+              <img src={didIcon} alt='profile' />
               <p className='title'>Get a DID</p>
               <p className='description'>
                 Log in, save your security words, and publish a new digital
@@ -74,6 +79,7 @@ const VerifiedCredentialPage = () => {
               </LinkButton>
             </WhiteBox>
             <WhiteBox>
+              <img src={aboutIcon} alt='profile' />
               <p className='title'>About us</p>
               <p className='description'>
                 Our mission is to guide users through a digital transformation
@@ -107,7 +113,7 @@ const VerifiedCredentialPage = () => {
                   <SplitItem
                     imgSrc={getdidsImg}
                     introOne='Decentralized Identity'
-                    title='getdids.com'
+                    title='getDIDs.com'
                     description='Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.'
                     onClick={() =>
                       (window.location.href = 'https://www.getdids.com/')
@@ -118,7 +124,7 @@ const VerifiedCredentialPage = () => {
                 <div ref={didRef}>
                   <SplitItem />
                   <SplitItem
-                    imgSrc={profileImg}
+                    imgSrc={profileexplainImg}
                     introOne='Identity Platform'
                     title='Profile'
                     description='Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.Find out how Tuum Technologies’ products are helping developers benefit from blockchain technology on an open Internet.'
@@ -131,7 +137,7 @@ const VerifiedCredentialPage = () => {
           </SplitWrap>
         </FeaturesContainer>
       </main>
-      <BgImgSubscriber bgColor='#e5e5e5' bgImg={subscriberbgImg} />
+      <BgImgSubscriber bgColor='#FAFAFA' bgImg={subscriberbgImg} />
       <Footer />
     </>
   );

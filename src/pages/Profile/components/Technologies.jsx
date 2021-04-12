@@ -10,7 +10,7 @@ import blockchainimg from '../../../assets/img/profile-blockchain.png';
 const ContainerWrapper = styled.div`
   width: 100%;
   padding-top: 230px;
-  background-color: #e5e5e5;
+  background-color: #fafafa;
 `;
 
 const Container = styled.div`
