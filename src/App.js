@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -11,33 +12,43 @@ import PersonalDataStorage from './pages/PersonalDataStorage';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/about' exact component={About} />
-        <Route
-          path='/solutions/digitalidentity'
-          exact
-          component={DigitalIdentity}
+    <>
+      <Helmet>
+        <title>Tuum Tech</title>
+        <meta
+          name='description'
+          content='Tuum Technologies is the software engineering leader of the Open Decentralized Internet space. Our suite of Elastos powered products and services help developers build decentralized applications and enable individuals to control data on an open web.'
         />
-        <Route
-          path='/solutions/verifiedcredential'
-          exact
-          component={VerifiedCredential}
-        />
-        <Route
-          path='/solutions/personaldatastorage'
-          exact
-          component={PersonalDataStorage}
-        />
-        {/* <Route
+        <meta name='theme-color' content='#000000' />
+      </Helmet>
+      <BrowserRouter>
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/about' exact component={About} />
+          <Route
+            path='/solutions/digitalidentity'
+            exact
+            component={DigitalIdentity}
+          />
+          <Route
+            path='/solutions/verifiedcredential'
+            exact
+            component={VerifiedCredential}
+          />
+          <Route
+            path='/solutions/personaldatastorage'
+            exact
+            component={PersonalDataStorage}
+          />
+          {/* <Route
           path='/solutions/peertopeernetwork'
           exact
           component={PeerToPeerNetwork}
         /> */}
-        <Route path='/products/profile' exact component={Profile} />
-      </Switch>
-    </BrowserRouter>
+          <Route path='/products/profile' exact component={Profile} />
+        </Switch>
+      </BrowserRouter>
+    </>
   );
 };
 
