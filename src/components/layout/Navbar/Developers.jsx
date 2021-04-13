@@ -15,6 +15,7 @@ const Developers = () => {
         <a
           href='https://developer.elastos.org/'
           target='_blank'
+          rel='noreferrer'
           className='dropdown-item'
         >
           Elastos Developer Portal
@@ -22,6 +23,7 @@ const Developers = () => {
         <a
           href='https://github.com/tuum-tech'
           target='_blank'
+          rel='noreferrer'
           className='dropdown-item'
         >
           Tuum GitHub
@@ -29,6 +31,7 @@ const Developers = () => {
         <a
           href='https://github.com/elastos'
           target='_blank'
+          rel='noreferrer'
           className='dropdown-item'
         >
           Elastos GitHub

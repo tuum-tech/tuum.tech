@@ -12,6 +12,7 @@ const Learn = () => {
         <a
           href='https://elastos.academy/'
           target='_blank'
+          rel='noreferrer'
           className='dropdown-item'
         >
           Elastos Academy
@@ -19,6 +20,7 @@ const Learn = () => {
         <a
           href='https://elastos.info/'
           target='_blank'
+          rel='noreferrer'
           className='dropdown-item'
         >
           Elastos Info
@@ -26,6 +28,7 @@ const Learn = () => {
         <a
           href='https://www.elastos.org/'
           target='_blank'
+          rel='noreferrer'
           className='dropdown-item'
         >
           Elastos Official Site
