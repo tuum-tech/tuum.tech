@@ -1,18 +1,18 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useEffect } from 'react';
+import styled from 'styled-components';
 
-import OurTeam from "./components/OurTeam";
+import OurTeam from './components/OurTeam';
 import {
   Footer,
   Hero,
   Section,
   Navbar,
   ContentContainer,
-} from "../../components/layout";
-import WhiteBgSubscriber from "../../components/Subscriber/WhiteBgSubscriber";
+} from '../../components/layout';
+import WhiteBgSubscriber from '../../components/Subscriber/WhiteBgSubscriber';
 
-import SectionBgImg from "../../assets/img/backgrounds/sectionbg.png";
-import heroImg from "../../assets/img/backgrounds/about-hero.png";
+import SectionBgImg from '../../assets/img/backgrounds/sectionbg.png';
+import heroImg from '../../assets/img/backgrounds/about-hero.png';
 
 const IntroText = styled.div`
   position: relative;
@@ -55,19 +55,22 @@ const IntroText = styled.div`
 `;
 
 const AboutPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />
       <main
         style={{
-          background: "#FAFAFA",
+          background: '#FAFAFA',
         }}
       >
         <Hero
           bgImg={heroImg}
-          shortInfo="About Tuum"
-          intro="From developer tools to decentralized products, Tuum Technologies is building Elastos blockchain infrastructure and applications for a new web that is more open, ethical, and secure."
-          title="Tuum Technologies is a Web3 Technology Company"
+          shortInfo='About Tuum'
+          intro='From developer tools to decentralized products, Tuum Technologies is building Elastos blockchain infrastructure and applications for a new web that is more open, ethical, and secure.'
+          title='Tuum Technologies is a Web3 Technology Company'
         />
         <ContentContainer>
           <IntroText>
@@ -93,16 +96,16 @@ const AboutPage = () => {
           containerStyle={{
             background: `url(${SectionBgImg})`,
           }}
-          padding="138px 0 0px"
-          bgColor="rgb(76, 111, 255, .8)"
-          maxWidth="960px"
-          txtColor="white"
+          padding='138px 2rem 0px'
+          bgColor='rgb(76, 111, 255, .8)'
+          maxWidth='960px'
+          txtColor='white'
           txtStyle={{
-            color: "white",
-            fontSize: "30px",
-            lineHeight: "40px",
+            color: 'white',
+            fontSize: '30px',
+            lineHeight: '40px',
           }}
-          contentText="Tuum is defined by its Latin origin “yours” - our emphasis is your technology, your data, your Internet. We respect the entrepreneurial drive and team building process; we’re here to stimulate through education, discovery, and development opportunities."
+          contentText='Tuum is defined by its Latin origin “yours” - our emphasis is your technology, your data, your Internet. We respect the entrepreneurial drive and team building process; we’re here to stimulate through education, discovery, and development opportunities.'
         >
           <WhiteBgSubscriber />
         </Section>

@@ -40,9 +40,10 @@ const SplitWrap = styled.div`
       button {
         background: #4c6fff;
         color: white;
-        height: 36px;
+        min-height: 36px;
         margin-top: 20px;
-        width: 186px;
+        min-width: 186px;
+        padding: 10px 20px;
       }
 
       p {
@@ -115,7 +116,8 @@ const SplitWrap = styled.div`
         margin-bottom: 32px;
         button,
         p {
-          margin: 0 auto;
+          margin-left: auto;
+          margin-right: auto;
           display: block;
         }
       }
@@ -124,10 +126,9 @@ const SplitWrap = styled.div`
 `;
 
 const SplitTitle = styled(SectionTitle)`
-  margin-bottom: 100px;
   text-align: center;
   color: #000000;
-  padding-top: 200px;
+  padding: 300px 2rem 100px;
 `;
 
 const SplitItem = ({
@@ -148,6 +149,7 @@ const SplitItem = ({
         <p className='txt mt-1'>{description}</p>
         {btnText && (
           <ShadowButton
+            // stype={{ paddingTop: '20px !important' }}
             text={btnText}
             shadowBg='rgba(23, 23, 27, 0.3)'
             onClick={onClick}

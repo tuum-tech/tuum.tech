@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {
   Navbar,
@@ -40,6 +40,9 @@ const DigitalIdentityPage = () => {
         'By issuing Universal IDs (UIDs) to everyone on the internet, blockchain automates trust. In a blockchain-based system of exchange, transactions occur only between individuals, thereby dissolving central authorities and intermediaries.',
     },
   ];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />
@@ -58,9 +61,7 @@ const DigitalIdentityPage = () => {
                   imgSrc={explainImg}
                   title='What are Decentralized Identities (DIDs)?'
                   description='These are IDs users create, own, and control completely independent of any business or government. Each new DID is issued by an autonomous, independent, and decentralized platform that acts as proof of ownership for the digital identity.'
-                  onClick={() =>
-                    (window.location.href = 'https://elastos.academy/did/')
-                  }
+                  onClick={() => window.open('https://elastos.academy/did/')}
                   btnText='Learn More at Elastos Academy'
                 />
               </div>

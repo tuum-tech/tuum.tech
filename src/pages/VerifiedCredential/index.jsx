@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {
   Navbar,
@@ -40,6 +40,9 @@ const VerifiedCredential = () => {
         'Built using W3C standards, Elastos Decentralized Identity (DID) provides greater transparency and seamless integration with identity verification partners.',
     },
   ];
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Navbar />
@@ -58,9 +61,7 @@ const VerifiedCredential = () => {
                   imgSrc={getdidsImg}
                   title='What are Verifiable Credentials?'
                   description='Verifiable credentials are the digital equivalent of physical credentials that we all own and are familiar with today. Some of the most common examples include passports, driving licenses, qualifications, and awards. With 60%+ of the world online it is critical that verifiable information be expressed on the web.'
-                  onClick={() =>
-                    (window.location.href = 'https://elastos.academy/did/')
-                  }
+                  onClick={() => window.open('https://elastos.academy/did/')}
                   btnText='Learn More at Elastos Academy'
                 />
               </div>

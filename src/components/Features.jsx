@@ -74,7 +74,7 @@ const Features = ({ features, bgColor = 'white', children }) => {
         <Title>Features at a Glance</Title>
         <FeatureRow>
           {features.map((item) => (
-            <Section>
+            <Section key={item.title}>
               <img src={item.img} alt='feature' />
               <p className='title'>{item.title}</p>
               <p className='text'>{item.text}</p>

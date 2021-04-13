@@ -132,7 +132,7 @@ const Technologies = () => {
         <Title>Embedded Technologies</Title>
         <Row>
           {techData.map((item) => (
-            <Section>
+            <Section key={item.title}>
               <img src={item.img} alt='feature' />
               <p className='title'>{item.title}</p>
               <p className='text'>{item.text}</p>

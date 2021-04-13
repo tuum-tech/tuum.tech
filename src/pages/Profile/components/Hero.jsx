@@ -22,9 +22,7 @@ const HeroContainer = styled.div`
   }
 
   @media only screen and (max-width: 992px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-
+    padding-top: 40px;
     img {
       bottom: 0px;
       right: 0px;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import ShadowButton from '../buttons/ShadowButton';
-import { HeaderTitle, ContentText } from '../Texts';
+import { ContentText } from '../Texts';
 
 const HeroContainerWrapper = styled.div`
   width: 100%;
@@ -11,29 +11,29 @@ const HeroContainerWrapper = styled.div`
 `;
 
 const HeroContainer = styled.div`
-  min-height: 880px;
+  min-height: 800px;
   background-repeat: no-repeat !important;
   background-position: center !important;
   background-size: cover !important;
-  padding-top: 38px;
+  padding: 38px 0 0;
 
   width: 100%;
-
-  @media only screen and (max-width: 992px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
 `;
 
 const HeroContent = styled.div`
   display: block;
   color: white;
-  padding: 128px 2rem 107px;
+  padding: 128px 11% 107px;
   width: 100%;
   max-width: 1240px;
-
   color: #ffffff;
-  margin: 0 auto;
+
+  @media only screen and (max-width: 992px) {
+    padding-left: 2rem;
+  }
+  @media only screen and (max-width: 400px) {
+    padding-top: 90px;
+  }
 `;
 
 const ShortIntro = styled.p`
@@ -44,20 +44,35 @@ const ShortIntro = styled.p`
   line-height: 30px;
 `;
 
-const Title = styled(HeaderTitle)`
+const Title = styled.p`
   margin-top: 15px;
   display: flex;
   align-items: center;
-  max-width: 900px;
+
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 60px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 42px;
+    line-height: 48px;
+    margin-top: 0px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    font-size: 32px;
+    line-height: 40px;
+    margin-top: 0px;
+  }
 `;
 
 const IntroTxt = styled(ContentText)`
-  width: 80%;
   color: white;
   display: block;
   margin-top: 51px;
   margin-bottom: 0px;
-  max-width: 716px;
 
   @media only screen and (max-width: 762px) {
     margin-top: 20px;
@@ -72,7 +87,6 @@ const Hero = ({
   buttonTxt,
   bgImg,
   leftAlign = true,
-  maxWidth = '900px',
 }) => {
   return (
     <HeroContainerWrapper>
@@ -83,20 +97,12 @@ const Hero = ({
       >
         <HeroContent
           style={{
-            textAlign: leftAlign ? 'left' : 'center',
+            marginLeft: leftAlign ? 0 : 'auto',
+            marginRight: leftAlign ? 0 : 'auto',
           }}
         >
           {shortInfo && <ShortIntro>{shortInfo}</ShortIntro>}
-          {title && (
-            <Title
-              style={{
-                marginLeft: leftAlign ? 0 : 'auto',
-                marginRight: leftAlign ? 0 : 'auto',
-              }}
-            >
-              {title}
-            </Title>
-          )}
+          {title && <Title>{title}</Title>}
           {intro && (
             <IntroTxt
               style={{
