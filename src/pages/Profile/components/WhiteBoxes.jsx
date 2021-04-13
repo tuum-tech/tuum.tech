@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const WhiteBoxArea = styled.div`
   position: relative;
-  width: calc(100$ - 4em);
-  margin: -200px 2em 0;
+  width: calc(100% - 4rem);
+  margin: -200px 2rem 0;
   min-height: 150px;
 `;
 
@@ -32,6 +32,11 @@ const WhiteBox1 = styled.div`
 
   max-width: 622px;
   width: 88%;
+
+  @media only screen and (max-width: 400px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 `;
 const WhiteBox2 = styled.div`
   max-width: 582px;

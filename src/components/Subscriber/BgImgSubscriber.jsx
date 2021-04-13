@@ -8,6 +8,9 @@ const Container = styled.div`
   position: relative;
   height: 200px;
   padding-top: 100px;
+  @media only screen and (max-width: 992px) {
+    padding-top: 0px;
+  }
 `;
 
 export const SubscriberContainerWrapper = styled.div`

@@ -23,8 +23,8 @@ export const WhiteBoxArea = styled.div`
   padding: 0px;
 
   @media only screen and (max-width: 992px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    // padding-left: 2rem;
+    // padding-right: 2rem;
   }
 
   @media only screen and (max-width: 768px) {

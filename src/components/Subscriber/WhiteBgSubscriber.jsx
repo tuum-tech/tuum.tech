@@ -11,7 +11,13 @@ import Form, { ButtonContainer } from './Form';
 const Container = styled.div`
   position: relative;
   height: 200px;
-  padding-top: 100px;
+  padding: 100px 2rem;
+
+  @media only screen and (max-width: 992px) {
+    padding-top: 0px;
+    height: 150px;
+    margin-top: 50px;
+  }
 `;
 
 const SubscriberContainer = styled.div`
@@ -40,7 +46,7 @@ const Subscriber = ({
 }) => {
   return (
     <Container>
-      <SubscriberContainerWrapper style={{ width: '100%' }}>
+      <SubscriberContainerWrapper style={{ width: 'calc(100% - 4rem)' }}>
         <SubscriberContainer className='row'>
           <NewsLetter className='col-lg-6'>
             <h1>{title}</h1>
