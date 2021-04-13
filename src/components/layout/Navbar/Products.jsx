@@ -32,6 +32,7 @@ const Products = () => {
           <a
             href='https://www.getdids.com/'
             className='media d-flex align-items-center'
+            target='_blank'
           >
             <div>
               <img src={idimg} width='53px' height='53px' alt='identity' />
