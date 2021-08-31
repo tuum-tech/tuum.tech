@@ -8,6 +8,8 @@ import Profile from './pages/Profile';
 import DigitalIdentity from './pages/DigitalIdentity';
 import VerifiedCredential from './pages/VerifiedCredential';
 import PersonalDataStorage from './pages/PersonalDataStorage';
+import PrivacyPolicy from './pages/Privacy';
+import TermsAndService from './pages/Terms';
 // import PeerToPeerNetwork from './pages/PeerToPeerNetwork';
 
 const App = () => {
@@ -39,6 +41,16 @@ const App = () => {
             path='/solutions/personaldatastorage'
             exact
             component={PersonalDataStorage}
+          />
+          <Route
+            path='/privacy'
+            exact
+            component={PrivacyPolicy}
+          />
+          <Route
+            path='/terms'
+            exact
+            component={TermsAndService}
           />
           {/* <Route
           path='/solutions/peertopeernetwork'

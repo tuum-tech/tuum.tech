@@ -121,8 +121,8 @@ const Footer = () => {
         </div>
         <FooterLinks>
           <FooterLink href='/'>©2021 Tuum Technologies</FooterLink>
-          <FooterLink href='/'>Privacy Policy</FooterLink>
-          <FooterLink href='/'>Terms of Service</FooterLink>
+          <FooterLink href='/privacy'>Privacy Policy</FooterLink>
+          <FooterLink href='/terms'>Terms of Service</FooterLink>
           <FooterLink href='mailto:contact@tuum.tech'>Contact</FooterLink>
         </FooterLinks>
       </FooterContent>

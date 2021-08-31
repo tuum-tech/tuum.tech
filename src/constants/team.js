@@ -55,7 +55,7 @@ const teamData = [
     avatar: yael,
   },
   {
-    name: 'Stephon Cheek',
+    name: 'Stephon Binh',
     role: 'Developer',
     avatar: anony,
   },
