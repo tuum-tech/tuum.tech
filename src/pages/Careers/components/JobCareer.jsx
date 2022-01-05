@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import profileLogo from '../../../assets/img/profile_logo.png';
+
 const Container = styled.div`
   margin-top: 25px;
   padding: 35px;
@@ -20,15 +22,9 @@ const Container = styled.div`
     }
   }
 
-  .apply {
-    background: rebeccapurple;
-    padding: 15px;
-    border-radius: 5px;
-    color: white;
-    display: block;
-    margin: 50px auto 0;
-    width: 200px;
-    text-align: center;
+  .profileLogo {
+    width: 150px;
+    margin: 30px 0 10px;
   }
 `;
 
@@ -46,6 +42,48 @@ const Header = styled.p`
   @media only screen and (max-width: 762px) {
     font-size: 30px;
     line-height: 35px;
+  }
+`;
+
+const ApplyButton = styled.a`
+  margin: 30px auto;
+  width: 200px;
+  display: block;
+  padding: 20px 40px;
+
+  background: linear-gradient(178.87deg, #995aff -13.48%, #dc59bf 92.25%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15),
+    0px 10px 25px rgba(177, 40, 255, 0.25);
+  border-radius: 10px;
+
+  font-family: SF Pro Display;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s Ease-out;
+  background-position: 0% 50%;
+  background-size: 100%;
+
+  &:hover {
+    transition: all 0.2s Ease-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15),
+      0px 10px 50px rgba(177, 40, 255, 0.3);
+    background-size: 200%;
+    background-position: bottom 400%;
+    transform: scale(1.2);
+    color: white;
+  }
+
+  &:focused {
+    transition: all 0.5s Ease-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15),
+      0px 10px 50px rgba(177, 40, 255, 0.25);
+    background-color: rgba(115, 67, 192, 1);
   }
 `;
 
@@ -77,6 +115,7 @@ const JobCareer = ({
           {showWhatIsProfile && (
             <>
               <br />
+              <img src={profileLogo} alt='profile' className='profileLogo' />
               <p style={{ fontWeight: 'bold' }}>What is Profile?</p>
               <p style={{ marginTop: '10px' }}>
                 Profile is a Web3 platform that gives users complete control of
@@ -152,9 +191,7 @@ const JobCareer = ({
             </>
           )}
 
-          <a className='apply' href='mailto:contact@tuum.tech'>
-            APPLY FOR THIS JOB
-          </a>
+          <ApplyButton href='mailto:contact@tuum.tech'>Apply now</ApplyButton>
         </div>
       )}
     </Container>
