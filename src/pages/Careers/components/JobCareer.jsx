@@ -24,7 +24,23 @@ const Container = styled.div`
 
   .profileLogo {
     width: 150px;
-    margin: 30px 0 10px;
+    margin: 10px 0;
+  }
+
+  @media only screen and (max-width: 762px) {
+    padding: 25px;
+
+    .content p {
+      font-size: 16px;
+      line-height: 25px;
+
+      letter-spacing: 0.05em;
+    }
+
+    .profileLogo {
+      width: 120px;
+      margin: 10px 0;
+    }
   }
 `;
 
@@ -40,8 +56,8 @@ const Header = styled.p`
   cursor: pointer;
 
   @media only screen and (max-width: 762px) {
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 22px;
+    line-height: 28px;
   }
 `;
 
